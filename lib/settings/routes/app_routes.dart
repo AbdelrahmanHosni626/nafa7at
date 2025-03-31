@@ -13,9 +13,40 @@ class AppRouter extends RootStackRouter {
       page: BottomNavBarRoute.page,
       initial: true,
       children: [
-        CustomRoute(page: HomeRoute.page, initial: true),
-        CustomRoute(page: PrayRoute.page),
-        CustomRoute(page: SettingsRoute.page),
+        AutoRoute(
+          page: HomeTabRoute.page,
+          initial: true,
+          children: [
+            CustomRoute(
+              page: HomeRoute.page,
+              initial: true,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+          ],
+        ),
+        AutoRoute(
+          page: PrayTabRoute.page,
+          children: [
+            CustomRoute(
+              page: PrayRoute.page,
+              initial: true,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+          ],
+        ),
+        AutoRoute(
+          page: SettingsTabRoute.page,
+          children: [
+            CustomRoute(
+              page: SettingsRoute.page,
+              initial: true,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+          ],
+        ),
       ],
     ),
   ];
@@ -24,4 +55,19 @@ class AppRouter extends RootStackRouter {
 @RoutePage(name: "BottomNavBarRoute")
 class BottomNavBar extends AutoRouter {
   const BottomNavBar({super.key});
+}
+
+@RoutePage(name: "HomeTabRoute")
+class HomeTab extends AutoRouter {
+  const HomeTab({super.key});
+}
+
+@RoutePage(name: "PrayTabRoute")
+class PrayTab extends AutoRouter {
+  const PrayTab({super.key});
+}
+
+@RoutePage(name: "SettingsTabRoute")
+class SettingsTab extends AutoRouter {
+  const SettingsTab({super.key});
 }

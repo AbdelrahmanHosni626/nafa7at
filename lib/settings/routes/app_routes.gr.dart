@@ -43,6 +43,22 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [HomeTab]
+class HomeTabRoute extends PageRouteInfo<void> {
+  const HomeTabRoute({List<PageRouteInfo>? children})
+    : super(HomeTabRoute.name, initialChildren: children);
+
+  static const String name = 'HomeTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeTab();
+    },
+  );
+}
+
+/// generated route for
 /// [PrayScreen]
 class PrayRoute extends PageRouteInfo<void> {
   const PrayRoute({List<PageRouteInfo>? children})
@@ -59,6 +75,22 @@ class PrayRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [PrayTab]
+class PrayTabRoute extends PageRouteInfo<void> {
+  const PrayTabRoute({List<PageRouteInfo>? children})
+    : super(PrayTabRoute.name, initialChildren: children);
+
+  static const String name = 'PrayTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const PrayTab();
+    },
+  );
+}
+
+/// generated route for
 /// [SettingsScreen]
 class SettingsRoute extends PageRouteInfo<void> {
   const SettingsRoute({List<PageRouteInfo>? children})
@@ -70,6 +102,22 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [SettingsTab]
+class SettingsTabRoute extends PageRouteInfo<void> {
+  const SettingsTabRoute({List<PageRouteInfo>? children})
+    : super(SettingsTabRoute.name, initialChildren: children);
+
+  static const String name = 'SettingsTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SettingsTab();
     },
   );
 }

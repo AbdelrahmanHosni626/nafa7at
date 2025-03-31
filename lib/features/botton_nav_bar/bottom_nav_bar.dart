@@ -1,11 +1,8 @@
-import 'dart:ui';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafa7at/settings/routes/app_routes.dart';
-import 'package:solar_icons/solar_icons.dart';
 
+@RoutePage(name: "BottomNavBarRoute")
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
 
@@ -22,58 +19,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      resizeToAvoidBottomInset: false,
-      extendBody: true,
       routes: routes,
-      homeIndex: 0,
+      homeIndex: 1,
       bottomNavigationBuilder: (_, tabsRouter) {
-        return PopScope(
-          canPop: tabsRouter.activeIndex < 1,
-          onPopInvokedWithResult: (didPop, result) {
-            if (tabsRouter.activeIndex != 0) {
-              tabsRouter.setActiveIndex(tabsRouter.activeIndex - 1);
-            }
-          },
-          child: ClipRect(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-              child: SizedBox(
-                height: 60.h,
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: SingleChildScrollView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    child: BottomNavigationBar(
-                      currentIndex: tabsRouter.activeIndex,
-                      onTap: (value) {
-                        handleNavbarItemTap(
-                          value: value,
-                          tabsRouter: tabsRouter,
-                        );
-                      },
-                      items: [
-                        BottomNavigationBarItem(
-                          icon: Icon(SolarIconsOutline.home, size: 24.sp),
-                          label: '',
-                        ),
-                        BottomNavigationBarItem(
-                          icon: Icon(
-                            SolarIconsOutline.videoLibrary,
-                            size: 24.sp,
-                          ),
-                          label: '',
-                        ),
-                        BottomNavigationBarItem(
-                          icon: Icon(SolarIconsOutline.magnifier, size: 24.sp),
-                          label: '',
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+        return BottomNavigationBar(
+          currentIndex: tabsRouter.activeIndex,
+          onTap: tabsRouter.setActiveIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.mosque_rounded),
+              label: 'Home',
             ),
-          ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_box),
+              label: 'Pray',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_box),
+              label: 'Settings',
+            ),
+          ],
         );
       },
     );

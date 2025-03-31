@@ -7,6 +7,6 @@ class PrayScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Pray Screen"));
+    return Scaffold(body: Center(child: Text("Pray Screen")));
   }
 }
