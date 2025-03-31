@@ -1,0 +1,9 @@
+{
+  "@@locale": "en",
+  "appName": "نفحات",
+
+  "@BottomNavBar": {},
+  "homeTab": " الصفحة الرئيسية",
+  "prayTab": "مواقيت الصلاة",
+  "settingsTab": "الإعدادات"
+}
