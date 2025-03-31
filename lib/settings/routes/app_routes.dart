@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
 import 'package:nafa7at/features/home/ui/home_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
@@ -10,6 +11,7 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(
+      path: "/",
       page: BottomNavBarRoute.page,
       initial: true,
       children: [
@@ -52,22 +54,17 @@ class AppRouter extends RootStackRouter {
   ];
 }
 
-@RoutePage(name: "BottomNavBarRoute")
-class BottomNavBar extends AutoRouter {
-  const BottomNavBar({super.key});
+@RoutePage(name: 'HomeTabRoute')
+class Home extends AutoRouter {
+  const Home({super.key});
 }
 
-@RoutePage(name: "HomeTabRoute")
-class HomeTab extends AutoRouter {
-  const HomeTab({super.key});
+@RoutePage(name: 'PrayTabRoute')
+class Pray extends AutoRouter {
+  const Pray({super.key});
 }
 
-@RoutePage(name: "PrayTabRoute")
-class PrayTab extends AutoRouter {
-  const PrayTab({super.key});
-}
-
-@RoutePage(name: "SettingsTabRoute")
-class SettingsTab extends AutoRouter {
-  const SettingsTab({super.key});
+@RoutePage(name: 'SettingsTabRoute')
+class Settings extends AutoRouter {
+  const Settings({super.key});
 }

@@ -27,6 +27,22 @@ class BottomNavBarRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [Home]
+class HomeTabRoute extends PageRouteInfo<void> {
+  const HomeTabRoute({List<PageRouteInfo>? children})
+    : super(HomeTabRoute.name, initialChildren: children);
+
+  static const String name = 'HomeTabRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const Home();
+    },
+  );
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -43,17 +59,17 @@ class HomeRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [HomeTab]
-class HomeTabRoute extends PageRouteInfo<void> {
-  const HomeTabRoute({List<PageRouteInfo>? children})
-    : super(HomeTabRoute.name, initialChildren: children);
+/// [Pray]
+class PrayTabRoute extends PageRouteInfo<void> {
+  const PrayTabRoute({List<PageRouteInfo>? children})
+    : super(PrayTabRoute.name, initialChildren: children);
 
-  static const String name = 'HomeTabRoute';
+  static const String name = 'PrayTabRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const HomeTab();
+      return const Pray();
     },
   );
 }
@@ -75,17 +91,17 @@ class PrayRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [PrayTab]
-class PrayTabRoute extends PageRouteInfo<void> {
-  const PrayTabRoute({List<PageRouteInfo>? children})
-    : super(PrayTabRoute.name, initialChildren: children);
+/// [Settings]
+class SettingsTabRoute extends PageRouteInfo<void> {
+  const SettingsTabRoute({List<PageRouteInfo>? children})
+    : super(SettingsTabRoute.name, initialChildren: children);
 
-  static const String name = 'PrayTabRoute';
+  static const String name = 'SettingsTabRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const PrayTab();
+      return const Settings();
     },
   );
 }
@@ -102,22 +118,6 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsScreen();
-    },
-  );
-}
-
-/// generated route for
-/// [SettingsTab]
-class SettingsTabRoute extends PageRouteInfo<void> {
-  const SettingsTabRoute({List<PageRouteInfo>? children})
-    : super(SettingsTabRoute.name, initialChildren: children);
-
-  static const String name = 'SettingsTabRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const SettingsTab();
     },
   );
 }

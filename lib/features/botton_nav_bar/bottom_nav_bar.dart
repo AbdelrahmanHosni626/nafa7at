@@ -25,6 +25,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         return BottomNavigationBar(
           currentIndex: tabsRouter.activeIndex,
           onTap: tabsRouter.setActiveIndex,
+
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.mosque_rounded),
@@ -42,13 +43,5 @@ class _BottomNavBarState extends State<BottomNavBar> {
         );
       },
     );
-  }
-
-  handleNavbarItemTap({required int value, required TabsRouter tabsRouter}) {
-    if (tabsRouter.activeIndex == value) {
-      tabsRouter.current.router.navigate(routes[value]);
-    } else {
-      tabsRouter.setActiveIndex(value);
-    }
   }
 }
