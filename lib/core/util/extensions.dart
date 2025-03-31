@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:intl/intl.dart' as localization;
+import 'package:intl/intl.dart' as localization;
 import 'package:nafa7at/generated/l10n.dart';
 
 extension BuildContextExtension on BuildContext {
@@ -13,15 +13,15 @@ extension BuildContextExtension on BuildContext {
 
   S get localizedText => S.of(this);
 
-  // TextDirection get currentTextDirection {
-  //   if (localization.Intl.getCurrentLocale() == 'ar') {
-  //     return TextDirection.rtl;
-  //   } else {
-  //     return TextDirection.ltr;
-  //   }
-  // }
+  TextDirection get currentTextDirection {
+    if (localization.Intl.getCurrentLocale() == 'ar') {
+      return TextDirection.rtl;
+    } else {
+      return TextDirection.ltr;
+    }
+  }
 
-  // bool get isEnglishLanguage => localization.Intl.getCurrentLocale() == 'en';
+  bool get isEnglishLanguage => localization.Intl.getCurrentLocale() == 'en';
 
   bool get hasFocus => FocusScope.of(this).hasPrimaryFocus;
 
