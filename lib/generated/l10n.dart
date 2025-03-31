@@ -59,6 +59,26 @@ class S {
   String get appName {
     return Intl.message('نفحات', name: 'appName', desc: '', args: []);
   }
+
+  /// ` الصفحة الرئيسية`
+  String get homeTab {
+    return Intl.message(
+      ' الصفحة الرئيسية',
+      name: 'homeTab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مواقيت الصلاة`
+  String get prayTab {
+    return Intl.message('مواقيت الصلاة', name: 'prayTab', desc: '', args: []);
+  }
+
+  /// `الإعدادات`
+  String get settingsTab {
+    return Intl.message('الإعدادات', name: 'settingsTab', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

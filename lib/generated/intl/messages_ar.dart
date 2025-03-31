@@ -23,5 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "appName": MessageLookupByLibrary.simpleMessage("نفحات"),
+    "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),
+    "prayTab": MessageLookupByLibrary.simpleMessage("مواقيت الصلاة"),
+    "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
   };
 }

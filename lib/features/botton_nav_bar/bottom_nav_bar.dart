@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/settings/routes/app_routes.dart';
 
 @RoutePage(name: "BottomNavBarRoute")
@@ -19,25 +20,28 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
       routes: routes,
       homeIndex: 1,
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(
           currentIndex: tabsRouter.activeIndex,
           onTap: tabsRouter.setActiveIndex,
+          enableFeedback: false,
 
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.mosque_rounded),
-              label: 'Home',
+              label: context.localizedText.homeTab,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.account_box),
-              label: 'Pray',
+              icon: Icon(Icons.access_time_rounded),
+              label: context.localizedText.prayTab,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.account_box),
-              label: 'Settings',
+              icon: Icon(Icons.settings_rounded),
+              label: context.localizedText.settingsTab,
             ),
           ],
         );
