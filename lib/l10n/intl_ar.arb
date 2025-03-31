@@ -1,6 +1,7 @@
 {
-  "@@locale": "en",
+  "@@locale": "ar",
   "appName": "نفحات",
+
 
   "@BottomNavBar": {},
   "homeTab": " الصفحة الرئيسية",
