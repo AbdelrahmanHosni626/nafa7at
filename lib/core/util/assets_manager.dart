@@ -3,6 +3,7 @@ class AssetsManager {
 
   // HOME
   static const String salahTime = "$_imagesPath/home/salah_time.png";
+  static const String quran = "$_imagesPath/home/quran.svg";
   static const String azkarSalah = "$_imagesPath/home/azkar_salah.svg";
   static const String azkarSabah = "$_imagesPath/home/azkar_sabah.svg";
   static const String azkarMasa2 = "$_imagesPath/home/azkar_masa2.svg";
