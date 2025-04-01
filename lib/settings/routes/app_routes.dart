@@ -1,5 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nafa7at/core/injection/injection.dart';
+import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
 import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
@@ -52,6 +55,19 @@ class AppRouter extends RootStackRouter {
       ],
     ),
   ];
+}
+
+@RoutePage(name: 'BottomNavBarRoute')
+class BottomNavBar extends AutoRouter implements AutoRouteWrapper {
+  const BottomNavBar({super.key});
+
+  @override
+  Widget wrappedRoute(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<HomeCubit>()..getPrayerTimes(),
+      child: this,
+    );
+  }
 }
 
 @RoutePage(name: 'HomeTabRoute')
