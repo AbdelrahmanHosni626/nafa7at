@@ -12,7 +12,8 @@ class Mawa3idSalahModel {
   @JsonKey(defaultValue: "")
   final String country;
 
-  final PrayerTimes? prayerTimes;
+  @JsonKey(name: "prayer_times")
+  final PrayerTimes prayerTimes;
   final Date date;
   final Meta meta;
 
@@ -22,7 +23,7 @@ class Mawa3idSalahModel {
   const Mawa3idSalahModel({
     required this.region,
     required this.country,
-    this.prayerTimes,
+    required this.prayerTimes,
     required this.date,
     required this.meta,
   });

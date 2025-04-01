@@ -110,6 +110,16 @@ class S {
     );
   }
 
+  /// `القران`
+  String get quran {
+    return Intl.message(
+      'القران',
+      name: 'quran',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اذكار الصلاة`
   String get azkarSalah {
     return Intl.message(
@@ -195,6 +205,66 @@ class S {
     return Intl.message(
       'المفضلة',
       name: 'likes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الفجر`
+  String get fajr {
+    return Intl.message(
+      'الفجر',
+      name: 'fajr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الشروق`
+  String get sunrise {
+    return Intl.message(
+      'الشروق',
+      name: 'sunrise',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الظهر`
+  String get dhuhr {
+    return Intl.message(
+      'الظهر',
+      name: 'dhuhr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العصر`
+  String get asr {
+    return Intl.message(
+      'العصر',
+      name: 'asr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المغرب`
+  String get maghrib {
+    return Intl.message(
+      'المغرب',
+      name: 'maghrib',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العشاء`
+  String get isha {
+    return Intl.message(
+      'العشاء',
+      name: 'isha',
       desc: '',
       args: [],
     );

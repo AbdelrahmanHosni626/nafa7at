@@ -11,6 +11,7 @@
   "@Home": {},
   "place": "المكان",
   "all3badat": "جميع العبادات",
+  "quran": "القران",
   "azkarSalah": "اذكار الصلاة",
   "azkarSabah": "اذكار الصباح",
   "azkarMasa2": "اذكار المساء",
@@ -19,5 +20,12 @@
   "allAd3ia": "جميع الادعية",
   "azkarMotanwi3a": "اذكار متنوعة",
   "closestMosques": "القبة",
-  "likes": "المفضلة"
+  "likes": "المفضلة",
+
+  "fajr": "الفجر",
+  "sunrise": "الشروق",
+  "dhuhr": "الظهر",
+  "asr": "العصر",
+  "maghrib": "المغرب",
+  "isha": "العشاء"
 }

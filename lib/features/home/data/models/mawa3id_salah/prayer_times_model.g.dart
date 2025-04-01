@@ -7,8 +7,8 @@ part of 'prayer_times_model.dart';
 // **************************************************************************
 
 PrayerTimes _$PrayerTimesFromJson(Map<String, dynamic> json) => PrayerTimes(
-  fajr: json['fajr'] as String? ?? '',
-  sunrise: json['sunrise'] as String? ?? '',
+  fajr: json['Fajr'] as String? ?? '',
+  sunrise: json['Sunrise'] as String? ?? '',
   dhuhr: json['Dhuhr'] as String? ?? '',
   asr: json['Asr'] as String? ?? '',
   maghrib: json['Maghrib'] as String? ?? '',
@@ -17,8 +17,8 @@ PrayerTimes _$PrayerTimesFromJson(Map<String, dynamic> json) => PrayerTimes(
 
 Map<String, dynamic> _$PrayerTimesToJson(PrayerTimes instance) =>
     <String, dynamic>{
-      'fajr': instance.fajr,
-      'sunrise': instance.sunrise,
+      'Fajr': instance.fajr,
+      'Sunrise': instance.sunrise,
       'Dhuhr': instance.dhuhr,
       'Asr': instance.asr,
       'Maghrib': instance.maghrib,

@@ -4,10 +4,10 @@ part 'prayer_times_model.g.dart';
 
 @JsonSerializable()
 class PrayerTimes {
-  @JsonKey(defaultValue: "")
+  @JsonKey(name: "Fajr", defaultValue: "")
   final String fajr;
 
-  @JsonKey(defaultValue: "")
+  @JsonKey(name: "Sunrise", defaultValue: "")
   final String sunrise;
 
   @JsonKey(name: "Dhuhr", defaultValue: "")
