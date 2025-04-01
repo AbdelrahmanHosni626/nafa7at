@@ -22,9 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "appName": MessageLookupByLibrary.simpleMessage("نفحات"),
-    "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),
-    "prayTab": MessageLookupByLibrary.simpleMessage("مواقيت الصلاة"),
-    "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
-  };
+        "all3badat": MessageLookupByLibrary.simpleMessage("جميع العبادات"),
+        "allAd3ia": MessageLookupByLibrary.simpleMessage("جميع الادعية"),
+        "appName": MessageLookupByLibrary.simpleMessage("نفحات"),
+        "azkarMasa2": MessageLookupByLibrary.simpleMessage("اذكار المساء"),
+        "azkarMotanwi3a": MessageLookupByLibrary.simpleMessage("اذكار متنوعة"),
+        "azkarSabah": MessageLookupByLibrary.simpleMessage("اذكار الصباح"),
+        "azkarSalah": MessageLookupByLibrary.simpleMessage("اذكار الصلاة"),
+        "closestMosques": MessageLookupByLibrary.simpleMessage("القبة"),
+        "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),
+        "likes": MessageLookupByLibrary.simpleMessage("المفضلة"),
+        "place": MessageLookupByLibrary.simpleMessage("المكان"),
+        "prayTab": MessageLookupByLibrary.simpleMessage("مواقيت الصلاة"),
+        "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+        "taqwinHijri": MessageLookupByLibrary.simpleMessage("التقويم الهجري"),
+        "tasbeh": MessageLookupByLibrary.simpleMessage("التسبيح")
+      };
 }

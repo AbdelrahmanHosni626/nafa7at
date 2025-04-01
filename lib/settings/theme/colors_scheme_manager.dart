@@ -4,16 +4,18 @@ class ColorsSchemeManager {
   static const ColorScheme light = ColorScheme(
     brightness: Brightness.light,
     primary: Color(0xFF01B7F1),
+    onPrimary: Color(0xFF005773),
     surface: Color(0xFFFFFFFF),
     onSurfaceVariant: Color(0xFFA1A1A1),
+    onSurface: Color(0xFF1E1E1E),
+    primaryContainer: Color(0xFFEDFBFF),
+    outlineVariant: Color(0xFF1B6180),
+    shadow: Color(0xFF000000),
 
-    onPrimary: Color(0xFFFFFFFF),
     secondary: Color(0xFF3FD6A6),
     onSecondary: Color(0xFFFFFFFF),
     error: Color(0xFFFF0000),
     onError: Color(0xFFFFFFFF),
-    onSurface: Color(0xFF353238),
-    primaryContainer: Color(0xFFB47FF0),
     onPrimaryContainer: Color(0xFF3C0D72),
     secondaryContainer: Color(0xFFB3EFDC),
     onSecondaryContainer: Color(0xFF145C45),
@@ -28,9 +30,9 @@ class ColorsSchemeManager {
     inverseSurface: Color(0xFF353238),
     onInverseSurface: Color(0xFFFFFFFF),
     inversePrimary: Color(0xFF4B108D),
-    shadow: Color(0xFF000000),
+
     surfaceTint: Color(0xFF003f7a),
-    outlineVariant: Color(0xFFAAB5BF),
+
     scrim: Color(0xFF000000),
     primaryFixed: Color(0xFFFFFFFF),
   );

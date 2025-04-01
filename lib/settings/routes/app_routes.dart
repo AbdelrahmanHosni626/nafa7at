@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
-import 'package:nafa7at/features/home/ui/home_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
 

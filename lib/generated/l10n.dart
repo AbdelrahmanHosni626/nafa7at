@@ -18,20 +18,17 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(
-      _current != null,
-      'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.',
-    );
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name =
-        (locale.countryCode?.isEmpty ?? false)
-            ? locale.languageCode
-            : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -44,10 +41,8 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(
-      instance != null,
-      'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?',
-    );
+    assert(instance != null,
+        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
@@ -57,7 +52,12 @@ class S {
 
   /// `نفحات`
   String get appName {
-    return Intl.message('نفحات', name: 'appName', desc: '', args: []);
+    return Intl.message(
+      'نفحات',
+      name: 'appName',
+      desc: '',
+      args: [],
+    );
   }
 
   /// ` الصفحة الرئيسية`
@@ -72,12 +72,132 @@ class S {
 
   /// `مواقيت الصلاة`
   String get prayTab {
-    return Intl.message('مواقيت الصلاة', name: 'prayTab', desc: '', args: []);
+    return Intl.message(
+      'مواقيت الصلاة',
+      name: 'prayTab',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `الإعدادات`
   String get settingsTab {
-    return Intl.message('الإعدادات', name: 'settingsTab', desc: '', args: []);
+    return Intl.message(
+      'الإعدادات',
+      name: 'settingsTab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المكان`
+  String get place {
+    return Intl.message(
+      'المكان',
+      name: 'place',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `جميع العبادات`
+  String get all3badat {
+    return Intl.message(
+      'جميع العبادات',
+      name: 'all3badat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الصلاة`
+  String get azkarSalah {
+    return Intl.message(
+      'اذكار الصلاة',
+      name: 'azkarSalah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الصباح`
+  String get azkarSabah {
+    return Intl.message(
+      'اذكار الصباح',
+      name: 'azkarSabah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار المساء`
+  String get azkarMasa2 {
+    return Intl.message(
+      'اذكار المساء',
+      name: 'azkarMasa2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التقويم الهجري`
+  String get taqwinHijri {
+    return Intl.message(
+      'التقويم الهجري',
+      name: 'taqwinHijri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التسبيح`
+  String get tasbeh {
+    return Intl.message(
+      'التسبيح',
+      name: 'tasbeh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `جميع الادعية`
+  String get allAd3ia {
+    return Intl.message(
+      'جميع الادعية',
+      name: 'allAd3ia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار متنوعة`
+  String get azkarMotanwi3a {
+    return Intl.message(
+      'اذكار متنوعة',
+      name: 'azkarMotanwi3a',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `القبة`
+  String get closestMosques {
+    return Intl.message(
+      'القبة',
+      name: 'closestMosques',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المفضلة`
+  String get likes {
+    return Intl.message(
+      'المفضلة',
+      name: 'likes',
+      desc: '',
+      args: [],
+    );
   }
 }
 

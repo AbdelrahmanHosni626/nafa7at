@@ -22,16 +22,16 @@ class ThemeManager {
         ),
         displaySmall: TextStyle(
           fontSize: 36.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
           color: ColorsSchemeManager.light.onSurface,
         ),
         headlineLarge: TextStyle(
           fontSize: 32.sp,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
           color: ColorsSchemeManager.light.onSurface,
         ),
         headlineMedium: TextStyle(
-          fontSize: 28.sp,
+          fontSize: 20.sp,
           fontWeight: FontWeight.w400,
           color: ColorsSchemeManager.light.onSurface,
         ),
@@ -41,13 +41,13 @@ class ThemeManager {
           color: ColorsSchemeManager.light.onSurface,
         ),
         titleLarge: TextStyle(
-          fontSize: 22.sp,
+          fontSize: 18.sp,
           fontWeight: FontWeight.w500,
           color: ColorsSchemeManager.light.onSurface,
         ),
         titleMedium: TextStyle(
           fontSize: 16.sp,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w300,
           color: ColorsSchemeManager.light.onSurface,
         ),
         titleSmall: TextStyle(
@@ -56,8 +56,8 @@ class ThemeManager {
           color: ColorsSchemeManager.light.onSurface,
         ),
         bodyLarge: TextStyle(
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w500,
           color: ColorsSchemeManager.light.onSurface,
         ),
         bodyMedium: TextStyle(
@@ -66,23 +66,23 @@ class ThemeManager {
           color: ColorsSchemeManager.light.onSurface,
         ),
         bodySmall: TextStyle(
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w300,
+          color: ColorsSchemeManager.light.onSurface,
+        ),
+        labelLarge: TextStyle(
           fontSize: 12.sp,
           fontWeight: FontWeight.w400,
           color: ColorsSchemeManager.light.onSurface,
         ),
-        labelLarge: TextStyle(
-          fontSize: 14.sp,
-          fontWeight: FontWeight.w500,
-          color: ColorsSchemeManager.light.onSurface,
-        ),
         labelMedium: TextStyle(
-          fontSize: 11.sp,
-          fontWeight: FontWeight.w500,
+          fontSize: 9.sp,
+          fontWeight: FontWeight.w600,
           color: ColorsSchemeManager.light.onSurface,
         ),
         labelSmall: TextStyle(
-          fontSize: 10.sp,
-          fontWeight: FontWeight.w500,
+          fontSize: 9.sp,
+          fontWeight: FontWeight.w300,
           color: ColorsSchemeManager.light.onSurface,
         ),
       ),
