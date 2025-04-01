@@ -5,8 +5,8 @@ import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/features/home/presentation/components/home_screen/all_3badat.dart';
 import 'package:nafa7at/features/home/presentation/components/home_screen/date_and_place.dart';
+import 'package:nafa7at/features/home/presentation/components/home_screen/next_salah.dart';
 import 'package:nafa7at/features/home/presentation/components/home_screen/salah_times.dart';
-import 'package:nafa7at/features/home/presentation/components/home_screen/widgets/next_salah.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {

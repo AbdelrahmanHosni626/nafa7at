@@ -90,7 +90,9 @@ class ThemeManager {
         showSelectedLabels: true,
         showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: ColorsSchemeManager.light.surface.withOpacity(0.7),
+        backgroundColor: ColorsSchemeManager.light.surface.withValues(
+          alpha: 0.7,
+        ),
         selectedItemColor: ColorsSchemeManager.light.primary,
         unselectedItemColor: ColorsSchemeManager.light.onSurfaceVariant,
       ),
@@ -183,7 +185,9 @@ class ThemeManager {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: ColorsSchemeManager.dark.surface.withOpacity(0.7),
+        backgroundColor: ColorsSchemeManager.dark.surface.withValues(
+          alpha: 0.7,
+        ),
         selectedItemColor: ColorsSchemeManager.dark.primary,
         unselectedItemColor: ColorsSchemeManager.dark.onSurfaceVariant,
       ),

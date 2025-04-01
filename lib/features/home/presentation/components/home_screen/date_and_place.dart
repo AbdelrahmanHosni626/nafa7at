@@ -9,7 +9,7 @@ class DateAndPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(30).r,
+      padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 30).r,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
