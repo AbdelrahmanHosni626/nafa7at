@@ -3,5 +3,5 @@ import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
 
 abstract class HomeRemoteDataSource {
   Future<Mawa3idSalahModel> getPrayerTimes();
-  Future<QuranModel> getSuraList();
+  Future<List<QuranModel>> getSuraList();
 }

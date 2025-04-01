@@ -5,5 +5,5 @@ import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
 
 abstract class HomeRepository {
   Future<Either<Failure, Mawa3idSalahModel>> getPrayerTimes();
-  Future<Either<Failure, QuranModel>> getSuraList();
+  Future<Either<Failure, List<QuranModel>>> getSuraList();
 }

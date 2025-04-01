@@ -24,9 +24,9 @@ class HomeRepositoryImpl extends HomeRepository {
   }
 
   @override
-  Future<Either<Failure, QuranModel>> getSuraList() async {
+  Future<Either<Failure, List<QuranModel>>> getSuraList() async {
     try {
-      QuranModel suraList = await _remoteDatasource.getSuraList();
+      List<QuranModel> suraList = await _remoteDatasource.getSuraList();
 
       return Right(suraList);
     } on ServerException catch (exception) {
