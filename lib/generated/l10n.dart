@@ -100,6 +100,36 @@ class S {
     );
   }
 
+  /// `الصلاة القادمة:`
+  String get nextSalah {
+    return Intl.message(
+      'الصلاة القادمة:',
+      name: 'nextSalah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مساءً`
+  String get pm {
+    return Intl.message(
+      'مساءً',
+      name: 'pm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صباحًا`
+  String get am {
+    return Intl.message(
+      'صباحًا',
+      name: 'am',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `جميع العبادات`
   String get all3badat {
     return Intl.message(
@@ -110,10 +140,10 @@ class S {
     );
   }
 
-  /// `القران`
+  /// `القران الكريم`
   String get quran {
     return Intl.message(
-      'القران',
+      'القران الكريم',
       name: 'quran',
       desc: '',
       args: [],

@@ -15,6 +15,7 @@ class All3badat extends StatefulWidget {
 
 class _All3badatState extends State<All3badat> {
   final List<Map<String, dynamic>> items = [
+    {"image": AssetsManager.quran, "title": Nafa7atApp.locale.quran},
     {"image": AssetsManager.azkarSalah, "title": Nafa7atApp.locale.azkarSalah},
     {"image": AssetsManager.azkarSabah, "title": Nafa7atApp.locale.azkarSabah},
     {"image": AssetsManager.azkarMasa2, "title": Nafa7atApp.locale.azkarMasa2},
@@ -38,7 +39,7 @@ class _All3badatState extends State<All3badat> {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      itemCount: 9,
+      itemCount: 10,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
