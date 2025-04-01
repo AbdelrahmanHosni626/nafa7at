@@ -37,7 +37,7 @@ class HomeTabRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const Home();
+      return WrappedRoute(child: const Home());
     },
   );
 }
@@ -86,6 +86,22 @@ class PrayRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const PrayScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [QuranScreen]
+class QuranRoute extends PageRouteInfo<void> {
+  const QuranRoute({List<PageRouteInfo>? children})
+    : super(QuranRoute.name, initialChildren: children);
+
+  static const String name = 'QuranRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const QuranScreen();
     },
   );
 }

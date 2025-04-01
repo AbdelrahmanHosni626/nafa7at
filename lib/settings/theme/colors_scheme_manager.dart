@@ -11,6 +11,7 @@ class ColorsSchemeManager {
     primaryContainer: Color(0xFFEDFBFF),
     outlineVariant: Color(0xFF1B6180),
     shadow: Color(0xFF000000),
+    surfaceContainerHighest: Color(0xFFF5F5F5),
 
     secondary: Color(0xFF3FD6A6),
     onSecondary: Color(0xFFFFFFFF),
@@ -26,7 +27,7 @@ class ColorsSchemeManager {
     errorContainer: Color(0xFFFF9999),
     onErrorContainer: Color(0xFF660000),
     outline: Color(0xFF8292A1),
-    surfaceContainerHighest: Color(0xFFE0DAE3),
+
     inverseSurface: Color(0xFF353238),
     onInverseSurface: Color(0xFFFFFFFF),
     inversePrimary: Color(0xFF4B108D),
