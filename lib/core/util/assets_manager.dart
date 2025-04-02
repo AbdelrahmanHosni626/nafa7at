@@ -15,6 +15,6 @@ class AssetsManager {
   static const String likes = "$_imagesPath/home/likes.svg";
 
   // Quran Screen
-  static const String nabawiMosque = "$_imagesPath/quran/nabawi_mosque.svg";
-  static const String kaaba = "$_imagesPath/quran/kaaba.svg";
+  static const String nabawiMosque = "$_imagesPath/nabawi_mosque.svg";
+  static const String kaaba = "$_imagesPath/kaaba.png";
 }

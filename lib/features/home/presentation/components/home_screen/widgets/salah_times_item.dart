@@ -6,36 +6,62 @@ class SalahTimesItem extends StatelessWidget {
   final IconData salahIcon;
   final String salahName;
   final String salahTime;
+  final bool isActive;
+
   const SalahTimesItem({
     super.key,
     required this.salahIcon,
     required this.salahName,
     required this.salahTime,
+    required this.isActive,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16).r,
+    return Container(
+      padding: EdgeInsets.all(14).r,
+      decoration: BoxDecoration(
+        color: isActive ? context.colorScheme.primary : Colors.transparent,
+        borderRadius: BorderRadius.circular(4).r,
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Icon(
             salahIcon,
-            size: 20.sp,
-            color: context.colorScheme.onPrimary.withValues(alpha: 0.56),
+            size: isActive ? 30.sp : 20.sp,
+            color:
+                isActive
+                    ? context.colorScheme.surface
+                    : context.colorScheme.onPrimary.withValues(alpha: 0.56),
           ),
           Text(
             salahName,
-            style: context.textTheme.labelLarge!.copyWith(
-              color: context.colorScheme.onPrimary.withValues(alpha: 0.56),
-            ),
+            style:
+                isActive
+                    ? context.textTheme.bodySmall!.copyWith(
+                      color: context.colorScheme.surface,
+                      fontWeight: FontWeight.w700,
+                    )
+                    : context.textTheme.labelLarge!.copyWith(
+                      color: context.colorScheme.onPrimary.withValues(
+                        alpha: 0.56,
+                      ),
+                    ),
           ),
           Text(
             salahTime,
-            style: context.textTheme.labelSmall!.copyWith(
-              color: context.colorScheme.onPrimary.withValues(alpha: 0.56),
-            ),
+            style:
+                isActive
+                    ? context.textTheme.bodySmall!.copyWith(
+                      color: context.colorScheme.surface,
+                      fontWeight: FontWeight.w700,
+                    )
+                    : context.textTheme.labelLarge!.copyWith(
+                      color: context.colorScheme.onPrimary.withValues(
+                        alpha: 0.56,
+                      ),
+                    ),
           ),
         ],
       ),

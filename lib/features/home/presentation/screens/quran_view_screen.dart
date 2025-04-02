@@ -55,22 +55,24 @@ class _QuranViewScreenState extends State<QuranViewScreen> {
             }
           },
           builder: (context, state) {
-            if (state.quranPagesListState == BlocState.loading) {
-              return const Center(child: CircularProgressIndicator());
-            } else if (state.quranPagesListState == BlocState.failure) {
-              return Center(child: Text(state.errorMessage));
-            } else {
-              return PageView.builder(
-                controller: _pageController,
-                scrollDirection: Axis.horizontal,
-                itemCount: state.quranPagesList.pages.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Nafa7atCachedNetworkImage(
-                    imageUrl: state.quranPagesList.pages[index].pageUrl,
-                    fit: BoxFit.fill,
-                  );
-                },
-              );
+            switch (state.quranPagesListState) {
+              case BlocState.initial:
+              case BlocState.loading:
+                return const Center(child: SizedBox.shrink());
+              case BlocState.failure:
+                return Center(child: Text(state.errorMessage));
+              case BlocState.success:
+                return PageView.builder(
+                  controller: _pageController,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: state.quranPagesList.pages.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Nafa7atCachedNetworkImage(
+                      imageUrl: state.quranPagesList.pages[index].pageUrl,
+                      fit: BoxFit.fill,
+                    );
+                  },
+                );
             }
           },
         ),
