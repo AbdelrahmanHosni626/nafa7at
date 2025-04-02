@@ -1,4 +1,45 @@
+import 'package:nafa7at/core/util/enums.dart';
+import 'package:nafa7at/features/home/data/models/mawa3id_salah/prayer_times_model.dart';
+
 class QuranHelper {
+  static PrayerTime? getCurrentPrayerTime(
+    DateTime now,
+    PrayerTimes prayerTimes,
+  ) {
+    final currentHour = now.hour;
+    final currentMinute = now.minute;
+    final currentTotalMinutes = currentHour * 60 + currentMinute;
+
+    // Helper function to parse prayer time strings like "04:14"
+    int parsePrayerTime(String timeStr) {
+      final parts = timeStr.split(':');
+      final hour = int.parse(parts[0]);
+      final minute = int.parse(parts[1]);
+      return hour * 60 + minute;
+    }
+
+    final fajr = parsePrayerTime(prayerTimes.fajr);
+    final sunrise = parsePrayerTime(prayerTimes.sunrise);
+    final dhuhr = parsePrayerTime(prayerTimes.dhuhr);
+    final asr = parsePrayerTime(prayerTimes.asr);
+    final maghrib = parsePrayerTime(prayerTimes.maghrib);
+    final isha = parsePrayerTime(prayerTimes.isha);
+
+    if (currentTotalMinutes >= fajr && currentTotalMinutes < sunrise) {
+      return PrayerTime.sunrise;
+    } else if (currentTotalMinutes >= sunrise && currentTotalMinutes < dhuhr) {
+      return PrayerTime.dhuhr;
+    } else if (currentTotalMinutes >= dhuhr && currentTotalMinutes < asr) {
+      return PrayerTime.asr;
+    } else if (currentTotalMinutes >= asr && currentTotalMinutes < maghrib) {
+      return PrayerTime.maghrib;
+    } else if (currentTotalMinutes >= maghrib && currentTotalMinutes < isha) {
+      return PrayerTime.isha;
+    } else {
+      return PrayerTime.fajr;
+    }
+  }
+
   static Map<int, int> surahToPage = {
     1: 1,
     2: 2,

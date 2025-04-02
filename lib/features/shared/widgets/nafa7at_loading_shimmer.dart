@@ -2,12 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nafa7at/core/util/colors_managers.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/features/shared/animations/custom_fade_animation.dart';
 import 'package:shimmer/shimmer.dart';
 
 class Nafa7atLoadingShimmer extends StatelessWidget {
-  final DazzifyLoadingType dazzifyLoadingType;
+  final Nafa7atLoadingType nafa7atLoadingType;
   final int? crossAxisCount;
   final double? mainAxisExtent;
   final double? crossAxisSpacing;
@@ -41,7 +42,7 @@ class Nafa7atLoadingShimmer extends StatelessWidget {
     this.scrollDirection,
     this.gridViewItemCount,
     this.listViewItemCount,
-    required this.dazzifyLoadingType,
+    required this.nafa7atLoadingType,
     this.sliderItemCount,
     this.itemPadding,
     this.separatorHeight,
@@ -53,8 +54,8 @@ class Nafa7atLoadingShimmer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: context.colorScheme.primary,
-      highlightColor: context.colorScheme.primary,
+      baseColor: ColorsManager.baseShimmerLight,
+      highlightColor: ColorsManager.highlightShimmerLight,
       period: const Duration(milliseconds: 1000),
       child: CustomFadeAnimation(
         duration: const Duration(milliseconds: 200),
@@ -64,16 +65,16 @@ class Nafa7atLoadingShimmer extends StatelessWidget {
   }
 
   Widget buildDazzifyShimmerLoading(BuildContext context) {
-    switch (dazzifyLoadingType) {
-      case DazzifyLoadingType.custom:
+    switch (nafa7atLoadingType) {
+      case Nafa7atLoadingType.custom:
         return customizableShimmer(context);
-      case DazzifyLoadingType.listView:
+      case Nafa7atLoadingType.listView:
         return buildListViewShimmer();
-      case DazzifyLoadingType.gridView:
+      case Nafa7atLoadingType.gridView:
         return buildGridViewShimmer();
-      case DazzifyLoadingType.messages:
+      case Nafa7atLoadingType.messages:
         return buildMessagesShimmer(context);
-      case DazzifyLoadingType.brands:
+      case Nafa7atLoadingType.brands:
         return buildBrandsShimmer();
     }
   }
@@ -229,4 +230,4 @@ class Nafa7atLoadingShimmer extends StatelessWidget {
   }
 }
 
-enum DazzifyLoadingType { custom, gridView, listView, messages, brands }
+enum Nafa7atLoadingType { custom, gridView, listView, messages, brands }
