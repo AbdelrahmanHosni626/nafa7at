@@ -1,12 +1,21 @@
 part of 'home_cubit.dart';
 
 class HomeState extends Equatable {
+  // States
   final BlocState prayerTimesState;
+  final BlocState suraListState;
+  final BlocState quranPagesListState;
+
+  // Data
   final Mawa3idSalahModel mawa3idSalahModel;
+  final List<QuranModel> quranModel;
+  final QuranPagesModel quranPagesList;
   final String errorMessage;
 
   const HomeState({
     this.prayerTimesState = BlocState.initial,
+    this.suraListState = BlocState.initial,
+    this.quranPagesListState = BlocState.initial,
     this.errorMessage = "",
     this.mawa3idSalahModel = const Mawa3idSalahModel(
       region: '',
@@ -36,20 +45,42 @@ class HomeState extends Equatable {
       ),
       meta: Meta(timezone: ""),
     ),
+    this.quranModel = const [],
+    this.quranPagesList = const QuranPagesModel(
+      status: '',
+      totalPages: 0,
+      pages: [],
+    ),
   });
 
   HomeState copyWith({
     BlocState? prayerTimesState,
+    BlocState? suraListState,
+    BlocState? quranPagesListState,
     Mawa3idSalahModel? mawa3idSalahModel,
+    List<QuranModel>? quranModel,
+    QuranPagesModel? quranPagesList,
     String? errorMessage,
   }) {
     return HomeState(
       prayerTimesState: prayerTimesState ?? this.prayerTimesState,
+      suraListState: suraListState ?? this.suraListState,
+      quranPagesListState: quranPagesListState ?? this.quranPagesListState,
       mawa3idSalahModel: mawa3idSalahModel ?? this.mawa3idSalahModel,
+      quranModel: quranModel ?? this.quranModel,
+      quranPagesList: quranPagesList ?? this.quranPagesList,
       errorMessage: errorMessage ?? this.errorMessage,
     );
   }
 
   @override
-  List<Object> get props => [prayerTimesState, mawa3idSalahModel, errorMessage];
+  List<Object> get props => [
+    prayerTimesState,
+    suraListState,
+    quranPagesListState,
+    mawa3idSalahModel,
+    quranModel,
+    quranPagesList,
+    errorMessage,
+  ];
 }

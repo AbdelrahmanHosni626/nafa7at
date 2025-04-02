@@ -13,4 +13,8 @@ class AssetsManager {
   static const String azkarMotanwi3a = "$_imagesPath/home/azkar_motanwi3a.svg";
   static const String closestMosques = "$_imagesPath/home/closest_mosques.svg";
   static const String likes = "$_imagesPath/home/likes.svg";
+
+  // Quran Screen
+  static const String nabawiMosque = "$_imagesPath/quran/nabawi_mosque.svg";
+  static const String kaaba = "$_imagesPath/quran/kaaba.svg";
 }

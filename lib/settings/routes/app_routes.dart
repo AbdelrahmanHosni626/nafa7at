@@ -1,10 +1,12 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nafa7at/core/injection/injection.dart';
 import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
 import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/quran_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/quran_view_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
 
@@ -26,6 +28,17 @@ class AppRouter extends RootStackRouter {
             CustomRoute(
               page: HomeRoute.page,
               initial: true,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: QuranRoute.page,
+
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: QuranViewRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),

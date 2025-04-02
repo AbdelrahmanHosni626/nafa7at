@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,6 +6,7 @@ import 'package:nafa7at/core/util/assets_manager.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/nafa7at_app.dart';
+import 'package:nafa7at/settings/routes/app_routes.dart';
 
 class All3badat extends StatefulWidget {
   const All3badat({super.key});
@@ -50,37 +52,42 @@ class _All3badatState extends State<All3badat> {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10).r,
-          child: Container(
-            decoration: BoxDecoration(
-              color: context.colorScheme.surface,
-              borderRadius: BorderRadius.circular(4),
-              boxShadow: [
-                BoxShadow(
-                  color: context.colorScheme.shadow.withValues(
-                    alpha: 0.1,
-                  ), // Shadow color
-                  blurRadius: 20,
-                  offset: Offset(0, 2.5),
-                ),
-              ],
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  items[index]["image"],
-                  height: 60.h,
-                  width: 60.w,
-                ),
-                verticalSpace(8),
-                Text(
-                  items[index]["title"],
-                  style: context.textTheme.bodyLarge!.copyWith(
-                    color: context.colorScheme.primary,
-                    fontWeight: FontWeight.w700,
+          child: GestureDetector(
+            onTap: () {
+              context.pushRoute(QuranRoute());
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: context.colorScheme.surface,
+                borderRadius: BorderRadius.circular(4),
+                boxShadow: [
+                  BoxShadow(
+                    color: context.colorScheme.shadow.withValues(
+                      alpha: 0.1,
+                    ), // Shadow color
+                    blurRadius: 20,
+                    offset: Offset(0, 2.5),
                   ),
-                ),
-              ],
+                ],
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset(
+                    items[index]["image"],
+                    height: 60.h,
+                    width: 60.w,
+                  ),
+                  verticalSpace(8),
+                  Text(
+                    items[index]["title"],
+                    style: context.textTheme.bodyLarge!.copyWith(
+                      color: context.colorScheme.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );
