@@ -1,7 +1,58 @@
+import 'package:nafa7at/core/util/assets_manager.dart';
 import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/prayer_times_model.dart';
+import 'package:nafa7at/nafa7at_app.dart';
+import 'package:nafa7at/settings/routes/app_routes.dart';
 
-class QuranHelper {
+class HomeHelper {
+  static final List<Map<String, dynamic>> items = [
+    {
+      "image": AssetsManager.quran,
+      "title": Nafa7atApp.locale.quran,
+      "route": QuranRoute(),
+    },
+    {
+      "image": AssetsManager.azkarSalah,
+      "title": Nafa7atApp.locale.azkarSalah,
+      "route": AzkarSalahRoute(),
+    },
+    {
+      "image": AssetsManager.azkarSabah,
+      "title": Nafa7atApp.locale.azkarSabah,
+      "route": AzkarSabahRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMasa2,
+      "title": Nafa7atApp.locale.azkarMasa2,
+      "route": AzkarMasaaRoute(),
+    },
+    {
+      "image": AssetsManager.taqwinHijri,
+      "title": Nafa7atApp.locale.taqwinHijri,
+      "route": TaqwimHijriRoute(),
+    },
+    {
+      "image": AssetsManager.tasbeh,
+      "title": Nafa7atApp.locale.tasbeh,
+      "route": TasbihRoute(),
+    },
+    {
+      "image": AssetsManager.allAd3ia,
+      "title": Nafa7atApp.locale.allAd3ia,
+      "route": AllAd3iaRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMotanwi3a,
+      "title": Nafa7atApp.locale.azkarMotanwi3a,
+      "route": AzkarMotanwi3aRoute(),
+    },
+    {
+      "image": AssetsManager.closestMosques,
+      "title": Nafa7atApp.locale.closestMosques,
+      "route": QiblaRoute(),
+    },
+  ];
+
   static PrayerTime? getCurrentPrayerTime(
     DateTime now,
     PrayerTimes prayerTimes,

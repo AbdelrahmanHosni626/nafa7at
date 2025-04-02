@@ -11,6 +11,86 @@
 part of 'app_routes.dart';
 
 /// generated route for
+/// [AllAd3iaScreen]
+class AllAd3iaRoute extends PageRouteInfo<void> {
+  const AllAd3iaRoute({List<PageRouteInfo>? children})
+    : super(AllAd3iaRoute.name, initialChildren: children);
+
+  static const String name = 'AllAd3iaRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AllAd3iaScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarMasaaScreen]
+class AzkarMasaaRoute extends PageRouteInfo<void> {
+  const AzkarMasaaRoute({List<PageRouteInfo>? children})
+    : super(AzkarMasaaRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarMasaaRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarMasaaScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarMotanwi3aScreen]
+class AzkarMotanwi3aRoute extends PageRouteInfo<void> {
+  const AzkarMotanwi3aRoute({List<PageRouteInfo>? children})
+    : super(AzkarMotanwi3aRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarMotanwi3aRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarMotanwi3aScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarSabahScreen]
+class AzkarSabahRoute extends PageRouteInfo<void> {
+  const AzkarSabahRoute({List<PageRouteInfo>? children})
+    : super(AzkarSabahRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarSabahRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarSabahScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarSalahScreen]
+class AzkarSalahRoute extends PageRouteInfo<void> {
+  const AzkarSalahRoute({List<PageRouteInfo>? children})
+    : super(AzkarSalahRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarSalahRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarSalahScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [BottomNavBar]
 class BottomNavBarRoute extends PageRouteInfo<void> {
   const BottomNavBarRoute({List<PageRouteInfo>? children})
@@ -86,6 +166,22 @@ class PrayRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const PrayScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [QiblaScreen]
+class QiblaRoute extends PageRouteInfo<void> {
+  const QiblaRoute({List<PageRouteInfo>? children})
+    : super(QiblaRoute.name, initialChildren: children);
+
+  static const String name = 'QiblaRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const QiblaScreen();
     },
   );
 }
@@ -188,6 +284,38 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [TaqwimHijriScreen]
+class TaqwimHijriRoute extends PageRouteInfo<void> {
+  const TaqwimHijriRoute({List<PageRouteInfo>? children})
+    : super(TaqwimHijriRoute.name, initialChildren: children);
+
+  static const String name = 'TaqwimHijriRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const TaqwimHijriScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [TasbihScreen]
+class TasbihRoute extends PageRouteInfo<void> {
+  const TasbihRoute({List<PageRouteInfo>? children})
+    : super(TasbihRoute.name, initialChildren: children);
+
+  static const String name = 'TasbihRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const TasbihScreen();
     },
   );
 }

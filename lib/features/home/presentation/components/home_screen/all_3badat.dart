@@ -2,12 +2,10 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nafa7at/core/util/assets_manager.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
+import 'package:nafa7at/features/home/home_helper/home_helper.dart';
 import 'package:nafa7at/features/shared/animations/custom_fade_animation.dart';
-import 'package:nafa7at/nafa7at_app.dart';
-import 'package:nafa7at/settings/routes/app_routes.dart';
 
 class All3badat extends StatefulWidget {
   const All3badat({super.key});
@@ -17,34 +15,12 @@ class All3badat extends StatefulWidget {
 }
 
 class _All3badatState extends State<All3badat> {
-  final List<Map<String, dynamic>> items = [
-    {"image": AssetsManager.quran, "title": Nafa7atApp.locale.quran},
-    {"image": AssetsManager.azkarSalah, "title": Nafa7atApp.locale.azkarSalah},
-    {"image": AssetsManager.azkarSabah, "title": Nafa7atApp.locale.azkarSabah},
-    {"image": AssetsManager.azkarMasa2, "title": Nafa7atApp.locale.azkarMasa2},
-    {
-      "image": AssetsManager.taqwinHijri,
-      "title": Nafa7atApp.locale.taqwinHijri,
-    },
-    {"image": AssetsManager.tasbeh, "title": Nafa7atApp.locale.tasbeh},
-    {"image": AssetsManager.allAd3ia, "title": Nafa7atApp.locale.allAd3ia},
-    {
-      "image": AssetsManager.azkarMotanwi3a,
-      "title": Nafa7atApp.locale.azkarMotanwi3a,
-    },
-    {
-      "image": AssetsManager.closestMosques,
-      "title": Nafa7atApp.locale.closestMosques,
-    },
-    {"image": AssetsManager.likes, "title": Nafa7atApp.locale.likes},
-  ];
-
   @override
   Widget build(BuildContext context) {
     return CustomFadeAnimation(
       duration: const Duration(seconds: 3),
       child: GridView.builder(
-        itemCount: 10,
+        itemCount: HomeHelper.items.length,
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -57,7 +33,7 @@ class _All3badatState extends State<All3badat> {
             padding: const EdgeInsets.symmetric(horizontal: 10).r,
             child: GestureDetector(
               onTap: () {
-                context.pushRoute(QuranRoute());
+                context.pushRoute(HomeHelper.items[index]["route"]);
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -77,13 +53,13 @@ class _All3badatState extends State<All3badat> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      items[index]["image"],
+                      HomeHelper.items[index]["image"],
                       height: 60.h,
                       width: 60.w,
                     ),
                     verticalSpace(8),
                     Text(
-                      items[index]["title"],
+                      HomeHelper.items[index]["title"],
                       style: context.textTheme.bodyLarge!.copyWith(
                         color: context.colorScheme.primary,
                         fontWeight: FontWeight.w700,

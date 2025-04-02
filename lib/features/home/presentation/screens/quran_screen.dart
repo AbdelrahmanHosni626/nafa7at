@@ -9,7 +9,8 @@ import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
-import 'package:nafa7at/features/home/home_helper/quran_page_view_helper.dart';
+import 'package:nafa7at/features/home/home_helper/home_helper.dart';
+import 'package:nafa7at/features/shared/animations/custom_fade_animation.dart';
 import 'package:nafa7at/features/shared/widgets/nafa7at_loading_shimmer.dart';
 import 'package:nafa7at/settings/routes/app_routes.dart';
 
@@ -63,50 +64,54 @@ class _QuranScreenState extends State<QuranScreen> {
                   case BlocState.failure:
                     return Center(child: Text(state.errorMessage));
                   case BlocState.success:
-                    return ListView.separated(
-                      itemCount: state.quranModel.length,
-                      separatorBuilder:
-                          (BuildContext context, int index) =>
-                              verticalSpace(22),
-                      itemBuilder: (context, index) {
-                        final item = state.quranModel[index];
-                        return Container(
-                          height: 40.h,
-                          width: context.screenWidth,
-                          decoration: BoxDecoration(
-                            color: context.colorScheme.surfaceContainerHighest
-                                .withValues(alpha: 0.5),
-                            borderRadius: BorderRadius.circular(4),
-                          ),
-                          child: InkWell(
-                            onTap: () {
-                              final pageNumber =
-                                  QuranHelper.surahToPage[int.parse(item.id)];
-                              if (pageNumber != null) {
-                                context.pushRoute(
-                                  QuranViewRoute(
-                                    pageNumber: pageNumber,
-                                    homeCubit: context.read<HomeCubit>(),
-                                  ),
-                                );
-                              }
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 20).r,
-                              child: Row(
-                                children: [
-                                  Text(item.number),
-                                  horizontalSpace(20),
-                                  Text(item.nameAr),
-                                  Spacer(),
-                                  suraType(item.type),
-                                ],
+                    return CustomFadeAnimation(
+                      child: ListView.separated(
+                        itemCount: state.quranModel.length,
+                        separatorBuilder:
+                            (BuildContext context, int index) =>
+                                verticalSpace(22),
+                        itemBuilder: (context, index) {
+                          final item = state.quranModel[index];
+                          return Container(
+                            height: 40.h,
+                            width: context.screenWidth,
+                            decoration: BoxDecoration(
+                              color: context.colorScheme.surfaceContainerHighest
+                                  .withValues(alpha: 0.5),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: InkWell(
+                              onTap: () {
+                                final pageNumber =
+                                    HomeHelper.surahToPage[int.parse(item.id)];
+                                if (pageNumber != null) {
+                                  context.pushRoute(
+                                    QuranViewRoute(
+                                      pageNumber: pageNumber,
+                                      homeCubit: context.read<HomeCubit>(),
+                                    ),
+                                  );
+                                }
+                              },
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(
+                                      horizontal: 20,
+                                    ).r,
+                                child: Row(
+                                  children: [
+                                    Text(item.number),
+                                    horizontalSpace(20),
+                                    Text(item.nameAr),
+                                    Spacer(),
+                                    suraType(item.type),
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     );
                 }
               },

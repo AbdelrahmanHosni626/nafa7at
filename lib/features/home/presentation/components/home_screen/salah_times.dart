@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
-import 'package:nafa7at/features/home/home_helper/quran_page_view_helper.dart';
+import 'package:nafa7at/features/home/home_helper/home_helper.dart';
 import 'package:nafa7at/features/home/presentation/components/home_screen/widgets/salah_times_item.dart';
 import 'package:nafa7at/features/shared/widgets/nafa7at_loading_shimmer.dart';
 import 'package:solar_icons/solar_icons.dart';
@@ -29,7 +29,7 @@ class SalahTimes extends StatelessWidget {
             return Center(child: Text(state.errorMessage));
           case BlocState.success:
             final now = DateTime.now();
-            final currentPrayer = QuranHelper.getCurrentPrayerTime(
+            final currentPrayer = HomeHelper.getCurrentPrayerTime(
               now,
               state.mawa3idSalahModel.prayerTimes,
             );
