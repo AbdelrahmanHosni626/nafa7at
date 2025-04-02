@@ -9,7 +9,7 @@ class HomeState extends Equatable {
   // Data
   final Mawa3idSalahModel mawa3idSalahModel;
   final List<QuranModel> quranModel;
-  final List<QuranPagesModel> quranPagesList;
+  final QuranPagesModel quranPagesList;
   final String errorMessage;
 
   const HomeState({
@@ -46,7 +46,11 @@ class HomeState extends Equatable {
       meta: Meta(timezone: ""),
     ),
     this.quranModel = const [],
-    this.quranPagesList = const [],
+    this.quranPagesList = const QuranPagesModel(
+      status: '',
+      totalPages: 0,
+      pages: [],
+    ),
   });
 
   HomeState copyWith({
@@ -55,7 +59,7 @@ class HomeState extends Equatable {
     BlocState? quranPagesListState,
     Mawa3idSalahModel? mawa3idSalahModel,
     List<QuranModel>? quranModel,
-    List<QuranPagesModel>? quranPagesList,
+    QuranPagesModel? quranPagesList,
     String? errorMessage,
   }) {
     return HomeState(

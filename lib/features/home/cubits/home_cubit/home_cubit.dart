@@ -76,7 +76,7 @@ class HomeCubit extends Cubit<HomeState> {
   Future<void> getQuranPagesList() async {
     emit(state.copyWith(quranPagesListState: BlocState.loading));
 
-    Either<Failure, List<QuranPagesModel>> result =
+    Either<Failure, QuranPagesModel> result =
         await _homeRepository.getQuranPagesList();
 
     result.fold(

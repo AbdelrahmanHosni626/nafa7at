@@ -40,10 +40,10 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   }
 
   @override
-  Future<List<QuranPagesModel>> getQuranPagesList() async {
+  Future<QuranPagesModel> getQuranPagesList() async {
     final response = await _apiConsumer.get(ApiConstants.quranPages);
     try {
-      final quranPagesList = ModelManager.toQuranPagesList(response);
+      final quranPagesList = QuranPagesModel.fromJson(response);
 
       return quranPagesList;
     } on DioException catch (error) {
