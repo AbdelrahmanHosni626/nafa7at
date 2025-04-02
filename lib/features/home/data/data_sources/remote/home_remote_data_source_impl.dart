@@ -7,6 +7,7 @@ import 'package:nafa7at/core/util/model_manager.dart';
 import 'package:nafa7at/features/home/data/data_sources/remote/home_remote_data_source.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/mawa3id_salah_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
+import 'package:nafa7at/features/home/data/models/quran/quran_pages_model.dart';
 
 @LazySingleton(as: HomeRemoteDataSource)
 class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
@@ -18,9 +19,9 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   Future<Mawa3idSalahModel> getPrayerTimes() async {
     final response = await _apiConsumer.get(ApiConstants.prayerTimes);
     try {
-      final baseResponse = Mawa3idSalahModel.fromJson(response);
+      final mawa3idSalah = Mawa3idSalahModel.fromJson(response);
 
-      return baseResponse;
+      return mawa3idSalah;
     } on DioException catch (error) {
       throw ServerException(error.message);
     }
@@ -30,9 +31,21 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   Future<List<QuranModel>> getSuraList() async {
     final response = await _apiConsumer.get(ApiConstants.surahList);
     try {
-      final baseResponse = ModelManager.toSuraList(response);
+      final suraList = ModelManager.toSuraList(response);
 
-      return baseResponse;
+      return suraList;
+    } on DioException catch (error) {
+      throw ServerException(error.message);
+    }
+  }
+
+  @override
+  Future<List<QuranPagesModel>> getQuranPagesList() async {
+    final response = await _apiConsumer.get(ApiConstants.quranPages);
+    try {
+      final quranPagesList = ModelManager.toQuranPagesList(response);
+
+      return quranPagesList;
     } on DioException catch (error) {
       throw ServerException(error.message);
     }
