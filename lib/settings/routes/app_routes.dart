@@ -27,13 +27,13 @@ class AppRouter extends RootStackRouter {
           children: [
             CustomRoute(
               page: HomeRoute.page,
-
+              initial: true,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),
             CustomRoute(
               page: QuranRoute.page,
-              initial: true,
+
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),

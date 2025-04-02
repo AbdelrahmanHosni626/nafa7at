@@ -1,33 +1,59 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nafa7at/core/injection/injection.dart';
 import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
 import 'package:nafa7at/features/shared/widgets/nafa7at_cached_network_image.dart';
 
 @RoutePage()
 class QuranViewScreen extends StatefulWidget implements AutoRouteWrapper {
-  const QuranViewScreen({super.key});
+  final int pageNumber;
+  final HomeCubit homeCubit;
+  const QuranViewScreen({
+    super.key,
+    required this.pageNumber,
+    required this.homeCubit,
+  });
 
   @override
   State<QuranViewScreen> createState() => _QuranViewScreenState();
 
   @override
   Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getQuranPagesList(),
+    return BlocProvider.value(
+      value: context.read<HomeCubit>()..getQuranPagesList(),
       child: this,
     );
   }
 }
 
 class _QuranViewScreenState extends State<QuranViewScreen> {
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BlocBuilder<HomeCubit, HomeState>(
+        body: BlocConsumer<HomeCubit, HomeState>(
+          listener: (context, state) {
+            if (state.quranPagesListState == BlocState.success) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (_pageController.hasClients) {
+                  _pageController.animateToPage(
+                    widget.pageNumber - 1,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                }
+              });
+            }
+          },
           builder: (context, state) {
             if (state.quranPagesListState == BlocState.loading) {
               return const Center(child: CircularProgressIndicator());
@@ -35,6 +61,7 @@ class _QuranViewScreenState extends State<QuranViewScreen> {
               return Center(child: Text(state.errorMessage));
             } else {
               return PageView.builder(
+                controller: _pageController,
                 scrollDirection: Axis.horizontal,
                 itemCount: state.quranPagesList.pages.length,
                 itemBuilder: (BuildContext context, int index) {

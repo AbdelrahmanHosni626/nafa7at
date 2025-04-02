@@ -9,6 +9,7 @@ import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
+import 'package:nafa7at/features/home/home_helper/quran_page_view_helper.dart';
 import 'package:nafa7at/settings/routes/app_routes.dart';
 
 @RoutePage()
@@ -42,13 +43,24 @@ class _QuranScreenState extends State<QuranScreen> {
                 return Center(child: Text(state.errorMessage));
               } else {
                 return ListView.separated(
-                  itemCount: 114,
+                  itemCount: state.quranModel.length,
                   separatorBuilder:
                       (BuildContext context, int index) => verticalSpace(22),
                   itemBuilder: (context, index) {
                     final item = state.quranModel[index];
                     return GestureDetector(
-                      onTap: () => context.pushRoute(QuranViewRoute()),
+                      onTap: () {
+                        final pageNumber =
+                            QuranHelper.surahToPage[int.parse(item.id)];
+                        if (pageNumber != null) {
+                          context.pushRoute(
+                            QuranViewRoute(
+                              pageNumber: pageNumber,
+                              homeCubit: context.read<HomeCubit>(),
+                            ),
+                          );
+                        }
+                      },
                       child: Container(
                         height: 40.h,
                         width: double.infinity,

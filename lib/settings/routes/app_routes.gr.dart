@@ -108,18 +108,56 @@ class QuranRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [QuranViewScreen]
-class QuranViewRoute extends PageRouteInfo<void> {
-  const QuranViewRoute({List<PageRouteInfo>? children})
-    : super(QuranViewRoute.name, initialChildren: children);
+class QuranViewRoute extends PageRouteInfo<QuranViewRouteArgs> {
+  QuranViewRoute({
+    Key? key,
+    required int pageNumber,
+    required HomeCubit homeCubit,
+    List<PageRouteInfo>? children,
+  }) : super(
+         QuranViewRoute.name,
+         args: QuranViewRouteArgs(
+           key: key,
+           pageNumber: pageNumber,
+           homeCubit: homeCubit,
+         ),
+         initialChildren: children,
+       );
 
   static const String name = 'QuranViewRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const QuranViewScreen();
+      final args = data.argsAs<QuranViewRouteArgs>();
+      return WrappedRoute(
+        child: QuranViewScreen(
+          key: args.key,
+          pageNumber: args.pageNumber,
+          homeCubit: args.homeCubit,
+        ),
+      );
     },
   );
+}
+
+class QuranViewRouteArgs {
+  const QuranViewRouteArgs({
+    this.key,
+    required this.pageNumber,
+    required this.homeCubit,
+  });
+
+  final Key? key;
+
+  final int pageNumber;
+
+  final HomeCubit homeCubit;
+
+  @override
+  String toString() {
+    return 'QuranViewRouteArgs{key: $key, pageNumber: $pageNumber, homeCubit: $homeCubit}';
+  }
 }
 
 /// generated route for
