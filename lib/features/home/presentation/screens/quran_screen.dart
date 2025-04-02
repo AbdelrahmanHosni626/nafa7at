@@ -9,6 +9,7 @@ import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
+import 'package:nafa7at/settings/routes/app_routes.dart';
 
 @RoutePage()
 class QuranScreen extends StatefulWidget implements AutoRouteWrapper {
@@ -46,24 +47,27 @@ class _QuranScreenState extends State<QuranScreen> {
                       (BuildContext context, int index) => verticalSpace(22),
                   itemBuilder: (context, index) {
                     final item = state.quranModel[index];
-                    return Container(
-                      height: 40.h,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: context.colorScheme.surfaceContainerHighest
-                            .withValues(alpha: 0.5),
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20).r,
-                        child: Row(
-                          children: [
-                            Text(item.number),
-                            horizontalSpace(20),
-                            Text(item.nameAr),
-                            Spacer(),
-                            SvgPicture.asset(AssetsManager.quran),
-                          ],
+                    return GestureDetector(
+                      onTap: () => context.pushRoute(QuranViewRoute()),
+                      child: Container(
+                        height: 40.h,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: context.colorScheme.surfaceContainerHighest
+                              .withValues(alpha: 0.5),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 20).r,
+                          child: Row(
+                            children: [
+                              Text(item.number),
+                              horizontalSpace(20),
+                              Text(item.nameAr),
+                              Spacer(),
+                              SvgPicture.asset(AssetsManager.quran),
+                            ],
+                          ),
                         ),
                       ),
                     );

@@ -107,6 +107,22 @@ class QuranRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [QuranViewScreen]
+class QuranViewRoute extends PageRouteInfo<void> {
+  const QuranViewRoute({List<PageRouteInfo>? children})
+    : super(QuranViewRoute.name, initialChildren: children);
+
+  static const String name = 'QuranViewRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const QuranViewScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [Settings]
 class SettingsTabRoute extends PageRouteInfo<void> {
   const SettingsTabRoute({List<PageRouteInfo>? children})
