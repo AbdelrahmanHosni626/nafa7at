@@ -18,7 +18,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   Future<Mawa3idSalahModel> getPrayerTimes() async {
     final response = await _apiConsumer.get(ApiConstants.prayerTimes);
     try {
-      final baseResponse = Mawa3idSalahModel.fromJson(response.data);
+      final baseResponse = Mawa3idSalahModel.fromJson(response);
 
       return baseResponse;
     } on DioException catch (error) {

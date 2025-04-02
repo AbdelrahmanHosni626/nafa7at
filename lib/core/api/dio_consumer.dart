@@ -6,7 +6,6 @@ import 'package:dio/io.dart';
 import 'package:flutter/foundation.dart';
 import 'package:nafa7at/core/api/api_consumer.dart';
 import 'package:nafa7at/core/api/api_status_codes.dart';
-import 'package:nafa7at/core/api/base_response.dart';
 import 'package:nafa7at/core/api/dio_log_interceptor.dart';
 import 'package:nafa7at/core/constants/api_constants.dart';
 import 'package:nafa7at/core/errors/exceptions.dart';
@@ -170,9 +169,8 @@ class DioApiConsumer extends ApiConsumer {
     }
   }
 
-  BaseResponse _handleResponseAsJson(Response<dynamic> response) {
-    final responseJson = jsonDecode(response.data.toString());
-    return BaseResponse.fromJson(responseJson, (json) => json);
+  dynamic _handleResponseAsJson(Response<dynamic> response) {
+    return jsonDecode(response.data.toString());
   }
 
   dynamic _handelDioError(DioException error) {
