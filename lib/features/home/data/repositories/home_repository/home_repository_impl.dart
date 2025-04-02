@@ -5,6 +5,7 @@ import 'package:nafa7at/core/errors/failures.dart';
 import 'package:nafa7at/features/home/data/data_sources/remote/home_remote_data_source.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/mawa3id_salah_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
+import 'package:nafa7at/features/home/data/models/quran/quran_pages_model.dart';
 import 'package:nafa7at/features/home/data/repositories/home_repository/home_repository.dart';
 
 @LazySingleton(as: HomeRepository)
@@ -29,6 +30,18 @@ class HomeRepositoryImpl extends HomeRepository {
       List<QuranModel> suraList = await _remoteDatasource.getSuraList();
 
       return Right(suraList);
+    } on ServerException catch (exception) {
+      return Left(ApiFailure(exception.message!));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<QuranPagesModel>>> getQuranPagesList() async {
+    try {
+      List<QuranPagesModel> quranPagesList =
+          await _remoteDatasource.getQuranPagesList();
+
+      return Right(quranPagesList);
     } on ServerException catch (exception) {
       return Left(ApiFailure(exception.message!));
     }
