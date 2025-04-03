@@ -3,4 +3,5 @@ class ApiConstants {
   static final String prayerTimes = 'getPrayerTimes';
   static final String surahList = 'surahs';
   static final String quranPages = 'quranPagesImage';
+  static final String azkar = 'azkar';
 }
