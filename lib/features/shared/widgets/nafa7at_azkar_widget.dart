@@ -28,7 +28,7 @@ class Nafa7atAzkarWidget extends StatelessWidget {
           Column(
             children: [
               Container(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: context.colorScheme.primaryContainer,
                   borderRadius: BorderRadius.only(
@@ -56,7 +56,7 @@ class Nafa7atAzkarWidget extends StatelessWidget {
                             horizontal: 20,
                           ).r,
                       child: Text(
-                        text.trimRight(),
+                        text,
                         textAlign: TextAlign.start,
                         textDirection: TextDirection.rtl,
                         style: context.textTheme.bodyLarge!.copyWith(
