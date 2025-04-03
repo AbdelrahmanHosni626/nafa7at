@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:nafa7at/core/errors/failures.dart';
 import 'package:nafa7at/core/util/enums.dart';
+import 'package:nafa7at/features/home/data/models/azkar_model.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/date_model.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/mawa3id_salah_model.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/prayer_times_model.dart';
@@ -94,6 +95,32 @@ class HomeCubit extends Cubit<HomeState> {
           state.copyWith(
             quranPagesList: quranPagesList,
             quranPagesListState: BlocState.success,
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> getAzkarList() async {
+    emit(state.copyWith(azkarListState: BlocState.loading));
+
+    Either<Failure, AzkarModel> result = await _homeRepository.getAzkarList();
+
+    result.fold(
+      (failure) {
+        emit(
+          state.copyWith(
+            errorMessage: failure.message,
+            azkarListState: BlocState.failure,
+          ),
+        );
+        debugPrint("${failure.message} &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+      },
+      (azkarList) {
+        emit(
+          state.copyWith(
+            azkarList: azkarList,
+            azkarListState: BlocState.success,
           ),
         );
       },

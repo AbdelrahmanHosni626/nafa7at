@@ -5,17 +5,20 @@ class HomeState extends Equatable {
   final BlocState prayerTimesState;
   final BlocState suraListState;
   final BlocState quranPagesListState;
+  final BlocState azkarListState;
 
   // Data
   final Mawa3idSalahModel mawa3idSalahModel;
   final List<QuranModel> quranModel;
   final QuranPagesModel quranPagesList;
+  final AzkarModel azkarList;
   final String errorMessage;
 
   const HomeState({
     this.prayerTimesState = BlocState.initial,
     this.suraListState = BlocState.initial,
     this.quranPagesListState = BlocState.initial,
+    this.azkarListState = BlocState.initial,
     this.errorMessage = "",
     this.mawa3idSalahModel = const Mawa3idSalahModel(
       region: '',
@@ -51,24 +54,29 @@ class HomeState extends Equatable {
       totalPages: 0,
       pages: [],
     ),
+    this.azkarList = const AzkarModel(azkar: []),
   });
 
   HomeState copyWith({
     BlocState? prayerTimesState,
     BlocState? suraListState,
     BlocState? quranPagesListState,
+    BlocState? azkarListState,
     Mawa3idSalahModel? mawa3idSalahModel,
     List<QuranModel>? quranModel,
     QuranPagesModel? quranPagesList,
+    AzkarModel? azkarList,
     String? errorMessage,
   }) {
     return HomeState(
       prayerTimesState: prayerTimesState ?? this.prayerTimesState,
       suraListState: suraListState ?? this.suraListState,
       quranPagesListState: quranPagesListState ?? this.quranPagesListState,
+      azkarListState: azkarListState ?? this.azkarListState,
       mawa3idSalahModel: mawa3idSalahModel ?? this.mawa3idSalahModel,
       quranModel: quranModel ?? this.quranModel,
       quranPagesList: quranPagesList ?? this.quranPagesList,
+      azkarList: azkarList ?? this.azkarList,
       errorMessage: errorMessage ?? this.errorMessage,
     );
   }
@@ -78,9 +86,11 @@ class HomeState extends Equatable {
     prayerTimesState,
     suraListState,
     quranPagesListState,
+    azkarListState,
     mawa3idSalahModel,
     quranModel,
     quranPagesList,
+    azkarList,
     errorMessage,
   ];
 }
