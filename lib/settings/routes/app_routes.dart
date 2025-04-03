@@ -125,7 +125,11 @@ class Home extends AutoRouter implements AutoRouteWrapper {
   @override
   Widget wrappedRoute(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getPrayerTimes(),
+      create:
+          (context) =>
+              getIt<HomeCubit>()
+                ..getPrayerTimes()
+                ..getAzkarList(),
       child: this,
     );
   }

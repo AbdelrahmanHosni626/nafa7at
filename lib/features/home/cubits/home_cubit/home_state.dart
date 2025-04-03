@@ -54,7 +54,22 @@ class HomeState extends Equatable {
       totalPages: 0,
       pages: [],
     ),
-    this.azkarList = const AzkarModel(azkar: []),
+    this.azkarList = const AzkarModel(
+      azkarSalah: [],
+      azkarSabah: [],
+      azkarMasaa: [],
+      prayerLaterAzkar: [],
+      sleepAzkar: [],
+      wakeUpAzkar: [],
+      mosqueAzkar: [],
+      azkarMotanwi3a: [],
+      adhanAzkar: [],
+      wuduAzkar: [],
+      homeAzkar: [],
+      khalaAzkar: [],
+      foodAzkar: [],
+      hajjAndUmrahAzkar: [],
+    ),
   });
 
   HomeState copyWith({
