@@ -57,6 +57,11 @@ class HomeHelper {
       "route": AzkarWuduRoute(),
     },
     {
+      "image": AssetsManager.azkarHome,
+      "title": Nafa7atApp.locale.azkarHome,
+      "route": AzkarHomeRoute(),
+    },
+    {
       "image": AssetsManager.azkarMotanwi3a,
       "title": Nafa7atApp.locale.azkarMotanwi3a,
       "route": AzkarMotanwi3aRoute(),

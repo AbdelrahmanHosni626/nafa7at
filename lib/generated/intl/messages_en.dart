@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "azkarAfterSalah":
             MessageLookupByLibrary.simpleMessage("اذكار بعد الصلاة"),
         "azkarAzaan": MessageLookupByLibrary.simpleMessage("اذكار الاذان"),
+        "azkarHome": MessageLookupByLibrary.simpleMessage("اذكار المنزل"),
         "azkarMasa2": MessageLookupByLibrary.simpleMessage("اذكار المساء"),
         "azkarMosque": MessageLookupByLibrary.simpleMessage("اذكار المسجد"),
         "azkarMotanwi3a": MessageLookupByLibrary.simpleMessage("اذكار متنوعة"),

@@ -59,6 +59,22 @@ class AzkarAzaanRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [AzkarHomeScreen]
+class AzkarHomeRoute extends PageRouteInfo<void> {
+  const AzkarHomeRoute({List<PageRouteInfo>? children})
+    : super(AzkarHomeRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarHomeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarHomeScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [AzkarMasaaScreen]
 class AzkarMasaaRoute extends PageRouteInfo<void> {
   const AzkarMasaaRoute({List<PageRouteInfo>? children})

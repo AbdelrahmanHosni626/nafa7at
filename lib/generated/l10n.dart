@@ -240,6 +240,16 @@ class S {
     );
   }
 
+  /// `اذكار المنزل`
+  String get azkarHome {
+    return Intl.message(
+      'اذكار المنزل',
+      name: 'azkarHome',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `التسبيح`
   String get tasbeh {
     return Intl.message(
