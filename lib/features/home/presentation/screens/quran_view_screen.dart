@@ -20,10 +20,7 @@ class QuranViewScreen extends StatefulWidget implements AutoRouteWrapper {
 
   @override
   Widget wrappedRoute(BuildContext context) {
-    return BlocProvider.value(
-      value: context.read<HomeCubit>()..getQuranPagesList(),
-      child: this,
-    );
+    return BlocProvider.value(value: context.read<HomeCubit>(), child: this);
   }
 }
 

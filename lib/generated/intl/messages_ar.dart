@@ -27,11 +27,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "am": MessageLookupByLibrary.simpleMessage("صباحًا"),
         "appName": MessageLookupByLibrary.simpleMessage("نفحات"),
         "asr": MessageLookupByLibrary.simpleMessage("العصر"),
+        "azkarAfterSalah":
+            MessageLookupByLibrary.simpleMessage("اذكار بعد الصلاة"),
+        "azkarAzaan": MessageLookupByLibrary.simpleMessage("اذكار الاذان"),
+        "azkarFood": MessageLookupByLibrary.simpleMessage("اذكار الطعام"),
+        "azkarHajjAndUmra":
+            MessageLookupByLibrary.simpleMessage("اذكار الحج والعمرة"),
+        "azkarHome": MessageLookupByLibrary.simpleMessage("اذكار المنزل"),
+        "azkarKhalaa": MessageLookupByLibrary.simpleMessage("اذكار الخلاء"),
         "azkarMasa2": MessageLookupByLibrary.simpleMessage("اذكار المساء"),
+        "azkarMosque": MessageLookupByLibrary.simpleMessage("اذكار المسجد"),
         "azkarMotanwi3a": MessageLookupByLibrary.simpleMessage("اذكار متنوعة"),
         "azkarSabah": MessageLookupByLibrary.simpleMessage("اذكار الصباح"),
         "azkarSalah": MessageLookupByLibrary.simpleMessage("اذكار الصلاة"),
-        "closestMosques": MessageLookupByLibrary.simpleMessage("القبة"),
+        "azkarSleep": MessageLookupByLibrary.simpleMessage("اذكار النوم"),
+        "azkarWakeup": MessageLookupByLibrary.simpleMessage("اذكار الاستيقاظ"),
+        "azkarWudu": MessageLookupByLibrary.simpleMessage("اذكار الوضوء"),
         "dhuhr": MessageLookupByLibrary.simpleMessage("الظهر"),
         "fajr": MessageLookupByLibrary.simpleMessage("الفجر"),
         "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),
@@ -42,10 +53,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "place": MessageLookupByLibrary.simpleMessage("المكان"),
         "pm": MessageLookupByLibrary.simpleMessage("مساءً"),
         "prayTab": MessageLookupByLibrary.simpleMessage("مواقيت الصلاة"),
+        "qibla": MessageLookupByLibrary.simpleMessage("القبلة"),
         "quran": MessageLookupByLibrary.simpleMessage("القران الكريم"),
         "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "sunrise": MessageLookupByLibrary.simpleMessage("الشروق"),
-        "taqwinHijri": MessageLookupByLibrary.simpleMessage("التقويم الهجري"),
         "tasbeh": MessageLookupByLibrary.simpleMessage("التسبيح")
       };
 }

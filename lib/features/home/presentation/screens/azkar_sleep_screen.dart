@@ -8,8 +8,8 @@ import 'package:nafa7at/features/shared/widgets/nafa7at_app_bar.dart';
 import 'package:nafa7at/features/shared/widgets/nafa7at_azkar_widget.dart';
 
 @RoutePage()
-class AzkarMasaaScreen extends StatelessWidget {
-  const AzkarMasaaScreen({super.key});
+class AzkarSleepScreen extends StatelessWidget {
+  const AzkarSleepScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,10 @@ class AzkarMasaaScreen extends StatelessWidget {
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           return ListView.separated(
-            itemCount: state.azkarList.azkarMasaa.length,
+            itemCount: state.azkarList.sleepAzkar.length,
             separatorBuilder: (context, index) => verticalSpace(20),
             itemBuilder: (context, index) {
-              final item = state.azkarList.azkarMasaa;
+              final item = state.azkarList.sleepAzkar;
               return Nafa7atAzkarWidget(
                 itemCount: item.length,
                 text: item[index].text,

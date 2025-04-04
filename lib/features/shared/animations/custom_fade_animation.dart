@@ -7,7 +7,7 @@ class CustomFadeAnimation extends StatefulWidget {
   const CustomFadeAnimation({
     super.key,
     required this.child,
-    this.duration = const Duration(seconds: 2),
+    this.duration = const Duration(seconds: 1),
   });
 
   @override

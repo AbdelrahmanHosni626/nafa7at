@@ -18,7 +18,7 @@ class _All3badatState extends State<All3badat> {
   @override
   Widget build(BuildContext context) {
     return CustomFadeAnimation(
-      duration: const Duration(seconds: 3),
+      duration: const Duration(seconds: 2),
       child: GridView.builder(
         itemCount: HomeHelper.items.length,
         shrinkWrap: true,
@@ -60,6 +60,7 @@ class _All3badatState extends State<All3badat> {
                     verticalSpace(8),
                     Text(
                       HomeHelper.items[index]["title"],
+                      textAlign: TextAlign.center,
                       style: context.textTheme.bodyLarge!.copyWith(
                         color: context.colorScheme.primary,
                         fontWeight: FontWeight.w700,

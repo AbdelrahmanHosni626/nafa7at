@@ -160,6 +160,16 @@ class S {
     );
   }
 
+  /// `اذكار بعد الصلاة`
+  String get azkarAfterSalah {
+    return Intl.message(
+      'اذكار بعد الصلاة',
+      name: 'azkarAfterSalah',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اذكار الصباح`
   String get azkarSabah {
     return Intl.message(
@@ -180,11 +190,91 @@ class S {
     );
   }
 
-  /// `التقويم الهجري`
-  String get taqwinHijri {
+  /// `اذكار الاستيقاظ`
+  String get azkarWakeup {
     return Intl.message(
-      'التقويم الهجري',
-      name: 'taqwinHijri',
+      'اذكار الاستيقاظ',
+      name: 'azkarWakeup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار النوم`
+  String get azkarSleep {
+    return Intl.message(
+      'اذكار النوم',
+      name: 'azkarSleep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار المسجد`
+  String get azkarMosque {
+    return Intl.message(
+      'اذكار المسجد',
+      name: 'azkarMosque',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الاذان`
+  String get azkarAzaan {
+    return Intl.message(
+      'اذكار الاذان',
+      name: 'azkarAzaan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الوضوء`
+  String get azkarWudu {
+    return Intl.message(
+      'اذكار الوضوء',
+      name: 'azkarWudu',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار المنزل`
+  String get azkarHome {
+    return Intl.message(
+      'اذكار المنزل',
+      name: 'azkarHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الطعام`
+  String get azkarFood {
+    return Intl.message(
+      'اذكار الطعام',
+      name: 'azkarFood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الحج والعمرة`
+  String get azkarHajjAndUmra {
+    return Intl.message(
+      'اذكار الحج والعمرة',
+      name: 'azkarHajjAndUmra',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الخلاء`
+  String get azkarKhalaa {
+    return Intl.message(
+      'اذكار الخلاء',
+      name: 'azkarKhalaa',
       desc: '',
       args: [],
     );
@@ -220,11 +310,11 @@ class S {
     );
   }
 
-  /// `القبة`
-  String get closestMosques {
+  /// `القبلة`
+  String get qibla {
     return Intl.message(
-      'القبة',
-      name: 'closestMosques',
+      'القبلة',
+      name: 'qibla',
       desc: '',
       args: [],
     );

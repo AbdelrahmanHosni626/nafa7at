@@ -3,6 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:nafa7at/core/errors/exceptions.dart';
 import 'package:nafa7at/core/errors/failures.dart';
 import 'package:nafa7at/features/home/data/data_sources/remote/home_remote_data_source.dart';
+import 'package:nafa7at/features/home/data/models/azkar_model.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/mawa3id_salah_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_pages_model.dart';
@@ -42,6 +43,17 @@ class HomeRepositoryImpl extends HomeRepository {
           await _remoteDatasource.getQuranPagesList();
 
       return Right(quranPagesList);
+    } on ServerException catch (exception) {
+      return Left(ApiFailure(exception.message!));
+    }
+  }
+
+  @override
+  Future<Either<Failure, AzkarModel>> getAzkarList() async {
+    try {
+      AzkarModel azkarList = await _remoteDatasource.getAzkarList();
+
+      return Right(azkarList);
     } on ServerException catch (exception) {
       return Left(ApiFailure(exception.message!));
     }

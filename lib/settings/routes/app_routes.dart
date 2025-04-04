@@ -6,14 +6,23 @@ import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
 import 'package:nafa7at/features/home/presentation/screens/Azkar_masaa_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/all_ad3ia_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_after_salah_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_azaan_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_food_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_hajj_and_umra_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_home_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_khalaa_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_mosque_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_motanwi3a_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_sabah_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_salah_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_sleep_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_wakeup_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_wudu_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/qibla_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/quran_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/quran_view_screen.dart';
-import 'package:nafa7at/features/home/presentation/screens/taqwim_hijri_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/tasbih_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
@@ -50,6 +59,11 @@ class AppRouter extends RootStackRouter {
               duration: Duration(milliseconds: 300),
             ),
             CustomRoute(
+              page: AzkarAfterSalahRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
               page: AzkarSabahRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
@@ -60,7 +74,47 @@ class AppRouter extends RootStackRouter {
               duration: Duration(milliseconds: 300),
             ),
             CustomRoute(
-              page: TaqwimHijriRoute.page,
+              page: AzkarWakeupRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarSleepRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarMosqueRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarAzaanRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarWuduRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarHomeRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarFoodRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarHajjAndUmraRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarKhalaaRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),
@@ -125,7 +179,12 @@ class Home extends AutoRouter implements AutoRouteWrapper {
   @override
   Widget wrappedRoute(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getPrayerTimes(),
+      create:
+          (context) =>
+              getIt<HomeCubit>()
+                ..getPrayerTimes()
+                ..getSuraList()
+                ..getAzkarList(),
       child: this,
     );
   }

@@ -5,6 +5,7 @@ import 'package:nafa7at/core/constants/api_constants.dart';
 import 'package:nafa7at/core/errors/exceptions.dart';
 import 'package:nafa7at/core/util/model_manager.dart';
 import 'package:nafa7at/features/home/data/data_sources/remote/home_remote_data_source.dart';
+import 'package:nafa7at/features/home/data/models/azkar_model.dart';
 import 'package:nafa7at/features/home/data/models/mawa3id_salah/mawa3id_salah_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_model.dart';
 import 'package:nafa7at/features/home/data/models/quran/quran_pages_model.dart';
@@ -46,6 +47,18 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
       final quranPagesList = QuranPagesModel.fromJson(response);
 
       return quranPagesList;
+    } on DioException catch (error) {
+      throw ServerException(error.message);
+    }
+  }
+
+  @override
+  Future<AzkarModel> getAzkarList() async {
+    final response = await _apiConsumer.get(ApiConstants.azkar);
+    try {
+      final azkarList = AzkarModel.fromJson(response);
+
+      return azkarList;
     } on DioException catch (error) {
       throw ServerException(error.message);
     }

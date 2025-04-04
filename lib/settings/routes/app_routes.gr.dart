@@ -27,6 +27,102 @@ class AllAd3iaRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [AzkarAfterSalahScreen]
+class AzkarAfterSalahRoute extends PageRouteInfo<void> {
+  const AzkarAfterSalahRoute({List<PageRouteInfo>? children})
+    : super(AzkarAfterSalahRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarAfterSalahRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarAfterSalahScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarAzaanScreen]
+class AzkarAzaanRoute extends PageRouteInfo<void> {
+  const AzkarAzaanRoute({List<PageRouteInfo>? children})
+    : super(AzkarAzaanRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarAzaanRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarAzaanScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarFoodScreen]
+class AzkarFoodRoute extends PageRouteInfo<void> {
+  const AzkarFoodRoute({List<PageRouteInfo>? children})
+    : super(AzkarFoodRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarFoodRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarFoodScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarHajjAndUmraScreen]
+class AzkarHajjAndUmraRoute extends PageRouteInfo<void> {
+  const AzkarHajjAndUmraRoute({List<PageRouteInfo>? children})
+    : super(AzkarHajjAndUmraRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarHajjAndUmraRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarHajjAndUmraScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarHomeScreen]
+class AzkarHomeRoute extends PageRouteInfo<void> {
+  const AzkarHomeRoute({List<PageRouteInfo>? children})
+    : super(AzkarHomeRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarHomeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarHomeScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarKhalaaScreen]
+class AzkarKhalaaRoute extends PageRouteInfo<void> {
+  const AzkarKhalaaRoute({List<PageRouteInfo>? children})
+    : super(AzkarKhalaaRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarKhalaaRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarKhalaaScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [AzkarMasaaScreen]
 class AzkarMasaaRoute extends PageRouteInfo<void> {
   const AzkarMasaaRoute({List<PageRouteInfo>? children})
@@ -38,6 +134,22 @@ class AzkarMasaaRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const AzkarMasaaScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarMosqueScreen]
+class AzkarMosqueRoute extends PageRouteInfo<void> {
+  const AzkarMosqueRoute({List<PageRouteInfo>? children})
+    : super(AzkarMosqueRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarMosqueRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarMosqueScreen();
     },
   );
 }
@@ -86,6 +198,54 @@ class AzkarSalahRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const AzkarSalahScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarSleepScreen]
+class AzkarSleepRoute extends PageRouteInfo<void> {
+  const AzkarSleepRoute({List<PageRouteInfo>? children})
+    : super(AzkarSleepRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarSleepRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarSleepScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarWakeupScreen]
+class AzkarWakeupRoute extends PageRouteInfo<void> {
+  const AzkarWakeupRoute({List<PageRouteInfo>? children})
+    : super(AzkarWakeupRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarWakeupRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarWakeupScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarWuduScreen]
+class AzkarWuduRoute extends PageRouteInfo<void> {
+  const AzkarWuduRoute({List<PageRouteInfo>? children})
+    : super(AzkarWuduRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarWuduRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarWuduScreen();
     },
   );
 }
@@ -197,7 +357,7 @@ class QuranRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return WrappedRoute(child: const QuranScreen());
+      return const QuranScreen();
     },
   );
 }
@@ -284,22 +444,6 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsScreen();
-    },
-  );
-}
-
-/// generated route for
-/// [TaqwimHijriScreen]
-class TaqwimHijriRoute extends PageRouteInfo<void> {
-  const TaqwimHijriRoute({List<PageRouteInfo>? children})
-    : super(TaqwimHijriRoute.name, initialChildren: children);
-
-  static const String name = 'TaqwimHijriRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const TaqwimHijriScreen();
     },
   );
 }

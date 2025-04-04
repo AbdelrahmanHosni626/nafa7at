@@ -17,6 +17,11 @@ class HomeHelper {
       "route": AzkarSalahRoute(),
     },
     {
+      "image": AssetsManager.azkarAfterSalah,
+      "title": Nafa7atApp.locale.azkarAfterSalah,
+      "route": AzkarAfterSalahRoute(),
+    },
+    {
       "image": AssetsManager.azkarSabah,
       "title": Nafa7atApp.locale.azkarSabah,
       "route": AzkarSabahRoute(),
@@ -27,9 +32,54 @@ class HomeHelper {
       "route": AzkarMasaaRoute(),
     },
     {
-      "image": AssetsManager.taqwinHijri,
-      "title": Nafa7atApp.locale.taqwinHijri,
-      "route": TaqwimHijriRoute(),
+      "image": AssetsManager.azkarWakeup,
+      "title": Nafa7atApp.locale.azkarWakeup,
+      "route": AzkarWakeupRoute(),
+    },
+    {
+      "image": AssetsManager.azkarSleep,
+      "title": Nafa7atApp.locale.azkarSleep,
+      "route": AzkarSleepRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMosque,
+      "title": Nafa7atApp.locale.azkarMosque,
+      "route": AzkarMosqueRoute(),
+    },
+    {
+      "image": AssetsManager.azkarAzaan,
+      "title": Nafa7atApp.locale.azkarAzaan,
+      "route": AzkarAzaanRoute(),
+    },
+    {
+      "image": AssetsManager.azkarWudu,
+      "title": Nafa7atApp.locale.azkarWudu,
+      "route": AzkarWuduRoute(),
+    },
+    {
+      "image": AssetsManager.azkarHome,
+      "title": Nafa7atApp.locale.azkarHome,
+      "route": AzkarHomeRoute(),
+    },
+    {
+      "image": AssetsManager.azkarFood,
+      "title": Nafa7atApp.locale.azkarFood,
+      "route": AzkarFoodRoute(),
+    },
+    {
+      "image": AssetsManager.azkarHajjAndUmra,
+      "title": Nafa7atApp.locale.azkarHajjAndUmra,
+      "route": AzkarHajjAndUmraRoute(),
+    },
+    {
+      "image": AssetsManager.azkarKhalaa,
+      "title": Nafa7atApp.locale.azkarKhalaa,
+      "route": AzkarKhalaaRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMotanwi3a,
+      "title": Nafa7atApp.locale.azkarMotanwi3a,
+      "route": AzkarMotanwi3aRoute(),
     },
     {
       "image": AssetsManager.tasbeh,
@@ -42,13 +92,8 @@ class HomeHelper {
       "route": AllAd3iaRoute(),
     },
     {
-      "image": AssetsManager.azkarMotanwi3a,
-      "title": Nafa7atApp.locale.azkarMotanwi3a,
-      "route": AzkarMotanwi3aRoute(),
-    },
-    {
       "image": AssetsManager.closestMosques,
-      "title": Nafa7atApp.locale.closestMosques,
+      "title": Nafa7atApp.locale.qibla,
       "route": QiblaRoute(),
     },
   ];
