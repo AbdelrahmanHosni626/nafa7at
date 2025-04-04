@@ -230,6 +230,16 @@ class S {
     );
   }
 
+  /// `اذكار الوضوء`
+  String get azkarWudu {
+    return Intl.message(
+      'اذكار الوضوء',
+      name: 'azkarWudu',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `التسبيح`
   String get tasbeh {
     return Intl.message(

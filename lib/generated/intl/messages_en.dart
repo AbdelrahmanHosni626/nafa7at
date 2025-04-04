@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "azkarSalah": MessageLookupByLibrary.simpleMessage("اذكار الصلاة"),
         "azkarSleep": MessageLookupByLibrary.simpleMessage("اذكار النوم"),
         "azkarWakeup": MessageLookupByLibrary.simpleMessage("اذكار الاستيقاظ"),
+        "azkarWudu": MessageLookupByLibrary.simpleMessage("اذكار الوضوء"),
         "dhuhr": MessageLookupByLibrary.simpleMessage("الظهر"),
         "fajr": MessageLookupByLibrary.simpleMessage("الفجر"),
         "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),

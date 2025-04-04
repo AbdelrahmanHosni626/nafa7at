@@ -17,6 +17,7 @@ class AssetsManager {
   static const String azkarSleep = "$_imagesPath/home/azkar_sleep.svg";
   static const String azkarMosque = "$_imagesPath/home/azkar_mosque.svg";
   static const String azkarAzaan = "$_imagesPath/home/azkar_azaan.svg";
+  static const String azkarWudu = "$_imagesPath/home/azkar_wudu.svg";
   static const String tasbeh = "$_imagesPath/home/tasbeh.svg";
   static const String allAd3ia = "$_imagesPath/home/all_ad3ia.svg";
   static const String azkarMotanwi3a = "$_imagesPath/home/azkar_motanwi3a.svg";

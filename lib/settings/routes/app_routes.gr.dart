@@ -171,6 +171,22 @@ class AzkarWakeupRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [AzkarWuduScreen]
+class AzkarWuduRoute extends PageRouteInfo<void> {
+  const AzkarWuduRoute({List<PageRouteInfo>? children})
+    : super(AzkarWuduRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarWuduRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarWuduScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [BottomNavBar]
 class BottomNavBarRoute extends PageRouteInfo<void> {
   const BottomNavBarRoute({List<PageRouteInfo>? children})

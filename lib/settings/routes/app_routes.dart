@@ -14,6 +14,7 @@ import 'package:nafa7at/features/home/presentation/screens/azkar_sabah_screen.da
 import 'package:nafa7at/features/home/presentation/screens/azkar_salah_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_sleep_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_wakeup_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_wudu_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/qibla_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/quran_screen.dart';
@@ -85,6 +86,11 @@ class AppRouter extends RootStackRouter {
             ),
             CustomRoute(
               page: AzkarAzaanRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarWuduRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),
