@@ -20,11 +20,17 @@ class QuranViewScreen extends StatefulWidget implements AutoRouteWrapper {
 
   @override
   Widget wrappedRoute(BuildContext context) {
-    return BlocProvider.value(value: context.read<HomeCubit>(), child: this);
+    return BlocProvider.value(
+      value: context.read<HomeCubit>()..getQuranPagesList(),
+      child: this,
+    );
   }
 }
 
-class _QuranViewScreenState extends State<QuranViewScreen> {
+class _QuranViewScreenState extends State<QuranViewScreen>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
   late PageController _pageController;
 
   @override
@@ -35,21 +41,12 @@ class _QuranViewScreenState extends State<QuranViewScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SafeArea(
       child: Scaffold(
         body: BlocConsumer<HomeCubit, HomeState>(
           listener: (context, state) {
-            if (state.quranPagesListState == BlocState.success) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                if (_pageController.hasClients) {
-                  _pageController.animateToPage(
-                    widget.pageNumber - 1,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                  );
-                }
-              });
-            }
+            _handleOpenSura(state: state);
           },
           builder: (context, state) {
             switch (state.quranPagesListState) {
@@ -75,5 +72,19 @@ class _QuranViewScreenState extends State<QuranViewScreen> {
         ),
       ),
     );
+  }
+
+  void _handleOpenSura({required HomeState state}) {
+    if (state.quranPagesListState == BlocState.success) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (_pageController.hasClients) {
+          _pageController.animateToPage(
+            widget.pageNumber - 1,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
+        }
+      });
+    }
   }
 }

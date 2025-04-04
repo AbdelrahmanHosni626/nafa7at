@@ -27,7 +27,7 @@ class _QuranScreenState extends State<QuranScreen> {
   @override
   void initState() {
     super.initState();
-    homeCubit = context.read<HomeCubit>()..getQuranPagesList();
+    homeCubit = context.read<HomeCubit>();
   }
 
   @override

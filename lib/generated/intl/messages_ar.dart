@@ -55,6 +55,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "prayTab": MessageLookupByLibrary.simpleMessage("مواقيت الصلاة"),
         "qibla": MessageLookupByLibrary.simpleMessage("القبلة"),
         "quran": MessageLookupByLibrary.simpleMessage("القران الكريم"),
+        "quranRadio":
+            MessageLookupByLibrary.simpleMessage("اذاعة القران الكريم"),
         "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "sunrise": MessageLookupByLibrary.simpleMessage("الشروق"),
         "tasbeh": MessageLookupByLibrary.simpleMessage("التسبيح")

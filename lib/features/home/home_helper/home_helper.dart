@@ -86,15 +86,20 @@ class HomeHelper {
       "title": Nafa7atApp.locale.tasbeh,
       "route": TasbihRoute(),
     },
-    {
+    /*{
       "image": AssetsManager.allAd3ia,
       "title": Nafa7atApp.locale.allAd3ia,
       "route": AllAd3iaRoute(),
-    },
+    },*/
     {
       "image": AssetsManager.closestMosques,
       "title": Nafa7atApp.locale.qibla,
       "route": QiblaRoute(),
+    },
+    {
+      "image": AssetsManager.quranLoading,
+      "title": Nafa7atApp.locale.quranRadio,
+      "route": QuranRadioRoute(),
     },
   ];
 
