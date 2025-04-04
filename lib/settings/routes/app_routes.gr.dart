@@ -59,6 +59,38 @@ class AzkarAzaanRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [AzkarFoodScreen]
+class AzkarFoodRoute extends PageRouteInfo<void> {
+  const AzkarFoodRoute({List<PageRouteInfo>? children})
+    : super(AzkarFoodRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarFoodRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarFoodScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarHajjAndUmraScreen]
+class AzkarHajjAndUmraRoute extends PageRouteInfo<void> {
+  const AzkarHajjAndUmraRoute({List<PageRouteInfo>? children})
+    : super(AzkarHajjAndUmraRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarHajjAndUmraRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarHajjAndUmraScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [AzkarHomeScreen]
 class AzkarHomeRoute extends PageRouteInfo<void> {
   const AzkarHomeRoute({List<PageRouteInfo>? children})

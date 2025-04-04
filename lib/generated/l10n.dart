@@ -250,6 +250,26 @@ class S {
     );
   }
 
+  /// `اذكار الطعام`
+  String get azkarFood {
+    return Intl.message(
+      'اذكار الطعام',
+      name: 'azkarFood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار الحج والعمرة`
+  String get azkarHajjAndUmra {
+    return Intl.message(
+      'اذكار الحج والعمرة',
+      name: 'azkarHajjAndUmra',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اذكار الخلاء`
   String get azkarKhalaa {
     return Intl.message(

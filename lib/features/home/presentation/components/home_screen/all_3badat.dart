@@ -60,6 +60,7 @@ class _All3badatState extends State<All3badat> {
                     verticalSpace(8),
                     Text(
                       HomeHelper.items[index]["title"],
+                      textAlign: TextAlign.center,
                       style: context.textTheme.bodyLarge!.copyWith(
                         color: context.colorScheme.primary,
                         fontWeight: FontWeight.w700,

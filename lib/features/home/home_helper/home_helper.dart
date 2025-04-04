@@ -62,6 +62,16 @@ class HomeHelper {
       "route": AzkarHomeRoute(),
     },
     {
+      "image": AssetsManager.azkarFood,
+      "title": Nafa7atApp.locale.azkarFood,
+      "route": AzkarFoodRoute(),
+    },
+    {
+      "image": AssetsManager.azkarHajjAndUmra,
+      "title": Nafa7atApp.locale.azkarHajjAndUmra,
+      "route": AzkarHajjAndUmraRoute(),
+    },
+    {
       "image": AssetsManager.azkarKhalaa,
       "title": Nafa7atApp.locale.azkarKhalaa,
       "route": AzkarKhalaaRoute(),
