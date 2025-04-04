@@ -27,10 +27,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "am": MessageLookupByLibrary.simpleMessage("صباحًا"),
         "appName": MessageLookupByLibrary.simpleMessage("نفحات"),
         "asr": MessageLookupByLibrary.simpleMessage("العصر"),
+        "azkarAfterSalah":
+            MessageLookupByLibrary.simpleMessage("اذكار بعد الصلاة"),
         "azkarMasa2": MessageLookupByLibrary.simpleMessage("اذكار المساء"),
         "azkarMotanwi3a": MessageLookupByLibrary.simpleMessage("اذكار متنوعة"),
         "azkarSabah": MessageLookupByLibrary.simpleMessage("اذكار الصباح"),
         "azkarSalah": MessageLookupByLibrary.simpleMessage("اذكار الصلاة"),
+        "azkarSleep": MessageLookupByLibrary.simpleMessage("اذكار النوم"),
         "dhuhr": MessageLookupByLibrary.simpleMessage("الظهر"),
         "fajr": MessageLookupByLibrary.simpleMessage("الفجر"),
         "homeTab": MessageLookupByLibrary.simpleMessage(" الصفحة الرئيسية"),
@@ -45,7 +48,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "quran": MessageLookupByLibrary.simpleMessage("القران الكريم"),
         "settingsTab": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "sunrise": MessageLookupByLibrary.simpleMessage("الشروق"),
-        "taqwinHijri": MessageLookupByLibrary.simpleMessage("التقويم الهجري"),
         "tasbeh": MessageLookupByLibrary.simpleMessage("التسبيح")
       };
 }

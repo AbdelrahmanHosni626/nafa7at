@@ -17,6 +17,11 @@ class HomeHelper {
       "route": AzkarSalahRoute(),
     },
     {
+      "image": AssetsManager.azkarAfterSalah,
+      "title": Nafa7atApp.locale.azkarAfterSalah,
+      "route": AzkarAfterSalahRoute(),
+    },
+    {
       "image": AssetsManager.azkarSabah,
       "title": Nafa7atApp.locale.azkarSabah,
       "route": AzkarSabahRoute(),
@@ -27,9 +32,9 @@ class HomeHelper {
       "route": AzkarMasaaRoute(),
     },
     {
-      "image": AssetsManager.taqwinHijri,
-      "title": Nafa7atApp.locale.taqwinHijri,
-      "route": TaqwimHijriRoute(),
+      "image": AssetsManager.azkarSleep,
+      "title": Nafa7atApp.locale.azkarSleep,
+      "route": AzkarSleepRoute(),
     },
     {
       "image": AssetsManager.tasbeh,

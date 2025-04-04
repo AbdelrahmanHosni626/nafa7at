@@ -160,6 +160,16 @@ class S {
     );
   }
 
+  /// `اذكار بعد الصلاة`
+  String get azkarAfterSalah {
+    return Intl.message(
+      'اذكار بعد الصلاة',
+      name: 'azkarAfterSalah',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اذكار الصباح`
   String get azkarSabah {
     return Intl.message(
@@ -180,11 +190,11 @@ class S {
     );
   }
 
-  /// `التقويم الهجري`
-  String get taqwinHijri {
+  /// `اذكار النوم`
+  String get azkarSleep {
     return Intl.message(
-      'التقويم الهجري',
-      name: 'taqwinHijri',
+      'اذكار النوم',
+      name: 'azkarSleep',
       desc: '',
       args: [],
     );

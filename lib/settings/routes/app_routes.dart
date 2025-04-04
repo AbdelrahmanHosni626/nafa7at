@@ -6,14 +6,15 @@ import 'package:nafa7at/features/botton_nav_bar/bottom_nav_bar.dart';
 import 'package:nafa7at/features/home/cubits/home_cubit/home_cubit.dart';
 import 'package:nafa7at/features/home/presentation/screens/Azkar_masaa_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/all_ad3ia_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_after_salah_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_motanwi3a_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_sabah_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_salah_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_sleep_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/home_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/qibla_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/quran_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/quran_view_screen.dart';
-import 'package:nafa7at/features/home/presentation/screens/taqwim_hijri_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/tasbih_screen.dart';
 import 'package:nafa7at/features/pray/ui/pray_screen.dart';
 import 'package:nafa7at/features/settings/ui/settings_screen.dart';
@@ -50,6 +51,11 @@ class AppRouter extends RootStackRouter {
               duration: Duration(milliseconds: 300),
             ),
             CustomRoute(
+              page: AzkarAfterSalahRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
               page: AzkarSabahRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
@@ -60,7 +66,7 @@ class AppRouter extends RootStackRouter {
               duration: Duration(milliseconds: 300),
             ),
             CustomRoute(
-              page: TaqwimHijriRoute.page,
+              page: AzkarSleepRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),

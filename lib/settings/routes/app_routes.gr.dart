@@ -27,6 +27,22 @@ class AllAd3iaRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [AzkarAfterSalahScreen]
+class AzkarAfterSalahRoute extends PageRouteInfo<void> {
+  const AzkarAfterSalahRoute({List<PageRouteInfo>? children})
+    : super(AzkarAfterSalahRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarAfterSalahRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarAfterSalahScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [AzkarMasaaScreen]
 class AzkarMasaaRoute extends PageRouteInfo<void> {
   const AzkarMasaaRoute({List<PageRouteInfo>? children})
@@ -86,6 +102,22 @@ class AzkarSalahRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const AzkarSalahScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [AzkarSleepScreen]
+class AzkarSleepRoute extends PageRouteInfo<void> {
+  const AzkarSleepRoute({List<PageRouteInfo>? children})
+    : super(AzkarSleepRoute.name, initialChildren: children);
+
+  static const String name = 'AzkarSleepRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const AzkarSleepScreen();
     },
   );
 }
@@ -284,22 +316,6 @@ class SettingsRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const SettingsScreen();
-    },
-  );
-}
-
-/// generated route for
-/// [TaqwimHijriScreen]
-class TaqwimHijriRoute extends PageRouteInfo<void> {
-  const TaqwimHijriRoute({List<PageRouteInfo>? children})
-    : super(TaqwimHijriRoute.name, initialChildren: children);
-
-  static const String name = 'TaqwimHijriRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const TaqwimHijriScreen();
     },
   );
 }
