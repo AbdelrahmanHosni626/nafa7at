@@ -8,23 +8,23 @@ import 'package:nafa7at/features/shared/widgets/nafa7at_app_bar.dart';
 import 'package:nafa7at/features/shared/widgets/nafa7at_azkar_widget.dart';
 
 @RoutePage()
-class AzkarMotanwi3aScreen extends StatelessWidget {
-  const AzkarMotanwi3aScreen({super.key});
+class AzkarAzaanScreen extends StatelessWidget {
+  const AzkarAzaanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
-        child: Nafa7atAppBar(title: context.localizedText.azkarMotanwi3a),
+        child: Nafa7atAppBar(title: context.localizedText.azkarAzaan),
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           return ListView.separated(
-            itemCount: state.azkarList.azkarMotanwi3a.length,
+            itemCount: state.azkarList.adhanAzkar.length,
             separatorBuilder: (context, index) => verticalSpace(20),
             itemBuilder: (context, index) {
-              final item = state.azkarList.azkarMotanwi3a;
+              final item = state.azkarList.adhanAzkar;
               return Nafa7atAzkarWidget(
                 itemCount: item.length,
                 text: item[index].text,

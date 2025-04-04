@@ -220,6 +220,16 @@ class S {
     );
   }
 
+  /// `اذكار الاذان`
+  String get azkarAzaan {
+    return Intl.message(
+      'اذكار الاذان',
+      name: 'azkarAzaan',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `التسبيح`
   String get tasbeh {
     return Intl.message(

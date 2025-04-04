@@ -47,6 +47,16 @@ class HomeHelper {
       "route": AzkarMosqueRoute(),
     },
     {
+      "image": AssetsManager.azkarAzaan,
+      "title": Nafa7atApp.locale.azkarAzaan,
+      "route": AzkarAzaanRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMotanwi3a,
+      "title": Nafa7atApp.locale.azkarMotanwi3a,
+      "route": AzkarMotanwi3aRoute(),
+    },
+    {
       "image": AssetsManager.tasbeh,
       "title": Nafa7atApp.locale.tasbeh,
       "route": TasbihRoute(),
@@ -55,11 +65,6 @@ class HomeHelper {
       "image": AssetsManager.allAd3ia,
       "title": Nafa7atApp.locale.allAd3ia,
       "route": AllAd3iaRoute(),
-    },
-    {
-      "image": AssetsManager.azkarMotanwi3a,
-      "title": Nafa7atApp.locale.azkarMotanwi3a,
-      "route": AzkarMotanwi3aRoute(),
     },
     {
       "image": AssetsManager.closestMosques,
