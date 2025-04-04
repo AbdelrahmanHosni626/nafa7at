@@ -32,9 +32,19 @@ class HomeHelper {
       "route": AzkarMasaaRoute(),
     },
     {
+      "image": AssetsManager.azkarWakeup,
+      "title": Nafa7atApp.locale.azkarWakeup,
+      "route": AzkarWakeupRoute(),
+    },
+    {
       "image": AssetsManager.azkarSleep,
       "title": Nafa7atApp.locale.azkarSleep,
       "route": AzkarSleepRoute(),
+    },
+    {
+      "image": AssetsManager.azkarMosque,
+      "title": Nafa7atApp.locale.azkarMosque,
+      "route": AzkarMosqueRoute(),
     },
     {
       "image": AssetsManager.tasbeh,

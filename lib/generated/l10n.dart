@@ -190,11 +190,31 @@ class S {
     );
   }
 
+  /// `اذكار الاستيقاظ`
+  String get azkarWakeup {
+    return Intl.message(
+      'اذكار الاستيقاظ',
+      name: 'azkarWakeup',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `اذكار النوم`
   String get azkarSleep {
     return Intl.message(
       'اذكار النوم',
       name: 'azkarSleep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اذكار المسجد`
+  String get azkarMosque {
+    return Intl.message(
+      'اذكار المسجد',
+      name: 'azkarMosque',
       desc: '',
       args: [],
     );
