@@ -129,6 +129,7 @@ class Home extends AutoRouter implements AutoRouteWrapper {
           (context) =>
               getIt<HomeCubit>()
                 ..getPrayerTimes()
+                ..getSuraList()
                 ..getAzkarList(),
       child: this,
     );

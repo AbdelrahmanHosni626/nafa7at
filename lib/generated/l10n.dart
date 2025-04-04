@@ -220,11 +220,11 @@ class S {
     );
   }
 
-  /// `القبة`
-  String get closestMosques {
+  /// `القبلة`
+  String get qibla {
     return Intl.message(
-      'القبة',
-      name: 'closestMosques',
+      'القبلة',
+      name: 'qibla',
       desc: '',
       args: [],
     );

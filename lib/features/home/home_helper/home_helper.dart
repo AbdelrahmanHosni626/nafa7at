@@ -48,7 +48,7 @@ class HomeHelper {
     },
     {
       "image": AssetsManager.closestMosques,
-      "title": Nafa7atApp.locale.closestMosques,
+      "title": Nafa7atApp.locale.qibla,
       "route": QiblaRoute(),
     },
   ];

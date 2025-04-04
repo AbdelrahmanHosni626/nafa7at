@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nafa7at/core/injection/injection.dart';
 import 'package:nafa7at/core/util/assets_manager.dart';
 import 'package:nafa7at/core/util/enums.dart';
 import 'package:nafa7at/core/util/extensions.dart';
@@ -15,19 +14,11 @@ import 'package:nafa7at/features/shared/widgets/nafa7at_loading_shimmer.dart';
 import 'package:nafa7at/settings/routes/app_routes.dart';
 
 @RoutePage()
-class QuranScreen extends StatefulWidget implements AutoRouteWrapper {
+class QuranScreen extends StatefulWidget {
   const QuranScreen({super.key});
 
   @override
   State<QuranScreen> createState() => _QuranScreenState();
-
-  @override
-  Widget wrappedRoute(BuildContext context) {
-    return BlocProvider(
-      create: (context) => getIt<HomeCubit>()..getSuraList(),
-      child: this,
-    );
-  }
 }
 
 class _QuranScreenState extends State<QuranScreen> {
@@ -36,7 +27,7 @@ class _QuranScreenState extends State<QuranScreen> {
   @override
   void initState() {
     super.initState();
-    homeCubit = context.read<HomeCubit>();
+    homeCubit = context.read<HomeCubit>()..getQuranPagesList();
   }
 
   @override
@@ -124,9 +115,23 @@ class _QuranScreenState extends State<QuranScreen> {
 
   Widget suraType(String type) {
     if (type == "Meccan") {
-      return SvgPicture.asset(AssetsManager.quran);
+      return SvgPicture.asset(
+        AssetsManager.kaaba,
+        colorFilter: ColorFilter.mode(
+          context.colorScheme.onPrimaryContainer,
+          BlendMode.srcIn,
+        ),
+        height: 30.h,
+        width: 30.w,
+      );
     } else if (type == "Medinan") {
-      return SvgPicture.asset(AssetsManager.allAd3ia);
+      return SvgPicture.asset(
+        AssetsManager.nabawiMosque,
+        colorFilter: ColorFilter.mode(
+          context.colorScheme.onPrimaryContainer,
+          BlendMode.srcIn,
+        ),
+      );
     }
     return SizedBox.shrink();
   }

@@ -1,5 +1,9 @@
 class AssetsManager {
   static const String _imagesPath = "assets/images";
+  static const String _jsonPath = "assets/json";
+
+  // JSON
+  static const String quranLoading = "$_jsonPath/quran_loading.json";
 
   // HOME
   static const String salahTime = "$_imagesPath/home/salah_time.png";
@@ -16,7 +20,7 @@ class AssetsManager {
 
   // Quran Screen
   static const String nabawiMosque = "$_imagesPath/home/nabawi_mosque.svg";
-  static const String kaaba = "$_imagesPath/home/kaaba.png";
+  static const String kaaba = "$_imagesPath/home/kaaba.svg";
 
   // Azkar Salah Screen
   static const String azkarFrame = "$_imagesPath/home/azkar_frame.svg";

@@ -197,7 +197,7 @@ class QuranRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return WrappedRoute(child: const QuranScreen());
+      return const QuranScreen();
     },
   );
 }
