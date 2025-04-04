@@ -9,6 +9,7 @@ import 'package:nafa7at/features/home/presentation/screens/all_ad3ia_screen.dart
 import 'package:nafa7at/features/home/presentation/screens/azkar_after_salah_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_azaan_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_home_screen.dart';
+import 'package:nafa7at/features/home/presentation/screens/azkar_khalaa_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_mosque_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_motanwi3a_screen.dart';
 import 'package:nafa7at/features/home/presentation/screens/azkar_sabah_screen.dart';
@@ -97,6 +98,11 @@ class AppRouter extends RootStackRouter {
             ),
             CustomRoute(
               page: AzkarHomeRoute.page,
+              transitionsBuilder: TransitionsBuilders.fadeIn,
+              duration: Duration(milliseconds: 300),
+            ),
+            CustomRoute(
+              page: AzkarKhalaaRoute.page,
               transitionsBuilder: TransitionsBuilders.fadeIn,
               duration: Duration(milliseconds: 300),
             ),
