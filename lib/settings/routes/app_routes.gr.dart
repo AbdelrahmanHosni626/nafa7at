@@ -347,6 +347,22 @@ class QiblaRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [QuranRadioScreen]
+class QuranRadioRoute extends PageRouteInfo<void> {
+  const QuranRadioRoute({List<PageRouteInfo>? children})
+    : super(QuranRadioRoute.name, initialChildren: children);
+
+  static const String name = 'QuranRadioRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const QuranRadioScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [QuranScreen]
 class QuranRoute extends PageRouteInfo<void> {
   const QuranRoute({List<PageRouteInfo>? children})

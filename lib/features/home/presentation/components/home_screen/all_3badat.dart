@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:nafa7at/core/constants/api_constants.dart';
 import 'package:nafa7at/core/util/extensions.dart';
 import 'package:nafa7at/core/util/spacing.dart';
 import 'package:nafa7at/features/home/home_helper/home_helper.dart';
@@ -15,6 +17,24 @@ class All3badat extends StatefulWidget {
 }
 
 class _All3badatState extends State<All3badat> {
+  final AudioPlayer _player = AudioPlayer();
+  bool isPlaying = false;
+
+  Future<void> toggleRadio(bool value) async {
+    setState(() => isPlaying = value);
+    if (value) {
+      try {
+        await _player.setUrl(ApiConstants.quranRadio);
+        await _player.play();
+      } catch (e) {
+        debugPrint("Error playing radio: $e");
+        setState(() => isPlaying = false);
+      }
+    } else {
+      await _player.stop();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return CustomFadeAnimation(
@@ -33,7 +53,10 @@ class _All3badatState extends State<All3badat> {
             padding: const EdgeInsets.symmetric(horizontal: 10).r,
             child: GestureDetector(
               onTap: () {
-                context.pushRoute(HomeHelper.items[index]["route"]);
+                HomeHelper.items[index]["title"] ==
+                        context.localizedText.quranRadio
+                    ? null
+                    : context.pushRoute(HomeHelper.items[index]["route"]);
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -52,11 +75,14 @@ class _All3badatState extends State<All3badat> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      HomeHelper.items[index]["image"],
-                      height: 60.h,
-                      width: 60.w,
-                    ),
+                    HomeHelper.items[index]["title"] ==
+                            context.localizedText.quranRadio
+                        ? Switch(value: isPlaying, onChanged: toggleRadio)
+                        : SvgPicture.asset(
+                          HomeHelper.items[index]["image"],
+                          height: 60.h,
+                          width: 60.w,
+                        ),
                     verticalSpace(8),
                     Text(
                       HomeHelper.items[index]["title"],
@@ -74,5 +100,11 @@ class _All3badatState extends State<All3badat> {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
   }
 }

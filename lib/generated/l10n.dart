@@ -310,6 +310,16 @@ class S {
     );
   }
 
+  /// `اذاعة القران الكريم`
+  String get quranRadio {
+    return Intl.message(
+      'اذاعة القران الكريم',
+      name: 'quranRadio',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `القبلة`
   String get qibla {
     return Intl.message(
