@@ -37,5 +37,5 @@ jobs:
       - name: Run Fastlane
         env:
           FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
-        run: flutter build apk --release --obfuscate --no-tree-shake-icons && bundle exec fastlane android firebase_distribution
+        run: flutter build apk --release --obfuscate --split-debug-info --no-tree-shake-icons && bundle exec fastlane android firebase_distribution
         working-directory: android
