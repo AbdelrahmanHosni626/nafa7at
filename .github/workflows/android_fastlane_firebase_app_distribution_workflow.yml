@@ -22,6 +22,10 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Add Linux platform to Gemfile.lock
+        run: bundle lock --add-platform x86_64-linux
+        working-directory: android
+
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
