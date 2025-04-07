@@ -2,11 +2,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class AllAd3iaScreen extends StatelessWidget {
+  const AllAd3iaScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Home Screen"));
+    return Scaffold(body: Center(child: Text("All Ad3ia Screen")));
   }
 }

@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.nafa7at.nafa7at"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "29.0.13113456"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -32,6 +32,14 @@ android {
 
     buildTypes {
         release {
+            getByName("release") {
+                isMinifyEnabled = true      // Obfuscation & code shrinking
+                isShrinkResources = true   // Remove unused resources
+                proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+                )
+            }
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
