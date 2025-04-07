@@ -37,5 +37,5 @@ jobs:
       - name: Run Fastlane
         env:
           FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
-        run: bundle exec fastlane android docdoc_distribution
+        run: bundle exec fastlane android firebase_distribution
         working-directory: android
