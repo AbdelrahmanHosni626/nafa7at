@@ -16,7 +16,7 @@ class AzkarSleepScreen extends StatelessWidget {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(kToolbarHeight),
-        child: Nafa7atAppBar(title: context.localizedText.azkarMasa2),
+        child: Nafa7atAppBar(title: context.localizedText.azkarSleep),
       ),
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
